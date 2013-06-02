@@ -54,28 +54,33 @@ void printHeader(struct Header *h)
     printf("Important Colors:%d\n\n", h->important_colors);
 }
 
-//int ****getPixelArray(char *bmpPath)
-//{
-//    FILE *bmpFile = fopen(bmpPath, "rb");
-//    if (bmpFile == NULL)
-//        die("valid BMP file not found");
-//    struct Header *h = getHeader(bmpPath);
-//
-//    fseek(bmpFile, h->offset - 1, SEEK_SET);
-//    
-//    int ****pixelArray = (int****) malloc(h->width * h->height * 3);
-//    int i,j,k;
-//    for(i=0; i < h->width; i++)
-//    {
-//        for(j=0; j < h->height; j++)
-//        {
-//            for(k=0; k < 3; k++)
-//            {
-//                fread(pixelArray[i][j][2-k], 1, 1, bmpFile);
-//            }
-//        }
-//    }
-//    
-//    return pixelArray;
-//}
+int ***getPixelArray(char *bmpPath)
+{
+    FILE *bmpFile = fopen(bmpPath, "rb");
+    if (bmpFile == NULL)
+        die("valid BMP file not found");
+    struct Header *h = getHeader(bmpPath);
+
+    fseek(bmpFile, h->offset - 1, SEEK_SET);
+
+	void *pixelArray[h->width][h->height][3];
+	
+    pixelArray = (void*) malloc(h->width * h->height * 3);
+	if(pixelArray == NULL)
+        die("malloc failed");
+	
+    int i,j,k;
+    for(i=0; i < h->width; i++)
+    {
+        for(j=0; j < h->height; j++)
+        {
+            for(k=0; k < 3; k++)
+            {
+                fread(pixelArray[i][j][2-k], 1, 1, bmpFile);
+            }
+        }
+    }
+
+    return *(int****)pixelArray;
+}
 

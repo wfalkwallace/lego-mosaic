@@ -33,6 +33,6 @@ struct Header *getHeader(char*);
 
 void printHeader(struct Header*);
 
-int ****getPixelArray(char*);
+int ***getPixelArray(char*);
 
 #endif

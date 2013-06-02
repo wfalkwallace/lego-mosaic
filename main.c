@@ -12,9 +12,12 @@
 
 int main(int argc, const char * argv[])
 {
-    char *bmpPath = "/Users/wgf2104/Desktop/IMG.bmp";
+    char *bmpPath = "/Users/wgf2104/Desktop/warning.bmp";
     struct Header *h = getHeader(bmpPath);
     printHeader(h);
+	int *** p = getPixelArray(bmpPath);
+	printf("got pixel array");
+
     
     return 0;
 }
