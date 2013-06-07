@@ -16,25 +16,48 @@ static void die(const char *message)
     perror(message);
     exit(1);
 }
+//global bmp file 
+FILE *bmpFile;
+//global header
+struct Header *h;
+//global pixel array
+struct pixelArray *p;
 
-/*
- * Header needs to be freed
- */
-struct Header *getHeader(char *bmpPath)
+//open global bmp file
+void openBMP(char *filepath)
 {
-    FILE *bmpFile = fopen (bmpPath, "rb");
+	bmpFile = fopen (filepath, "rb");
     if (bmpFile == NULL)
         die("valid BMP file not found");
-    struct Header *h = (struct Header*) malloc(sizeof(struct Header));
+}
+
+//closes global bmp
+void closeBMP()
+{
+	//close the image
+    fclose(bmpFile);
+}
+
+/*
+ * Header needs to be stripped
+ * FREE NOT YET IMPLEMENTED
+ */
+struct Header *getHeader()
+{
+    //malloc header struct
+	h = (struct Header*) malloc(sizeof(struct Header));
     if(h == NULL)
         die("malloc failed");
+	
+	//populate header struct
+	//why is it having trouble with the first two bits? something char related?
     fread(&(h->type), 2, 1, bmpFile);
     fread(&(h->filesize), 52, 1, bmpFile);
-    fclose(bmpFile);
+	//return header struct
     return h;
 }
 
-void printHeader(struct Header *h)
+void printHeader()
 {
     printf("\nBitmap Type:%s\n", h->type);
     printf("File Size:%d\n", h->filesize);
@@ -54,21 +77,23 @@ void printHeader(struct Header *h)
     printf("Important Colors:%d\n\n", h->important_colors);
 }
 
-int ***getPixelArray(char *bmpPath)
+//get the pixel array; return POINTER TO RGB pixel array struct, int****
+struct int ***getPixelArray()
 {
-    FILE *bmpFile = fopen(bmpPath, "rb");
-    if (bmpFile == NULL)
-        die("valid BMP file not found");
-    struct Header *h = getHeader(bmpPath);
-
+	//skip the header
     fseek(bmpFile, h->offset - 1, SEEK_SET);
 
-	void *pixelArray[h->width][h->height][3];
+	//silly operator precedence
+	//pointer to 
+	int pixels[h->width][h->height][3];
 	
-    pixelArray = (void*) malloc(h->width * h->height * 3);
-	if(pixelArray == NULL)
+	//malloc the array
+    pixels = (int***) malloc(h->width * h->height * 3);
+	if(pixels == NULL)
         die("malloc failed");
 	
+	//populate the array
+	// i - width; j - height; k - R/G/B
     int i,j,k;
     for(i=0; i < h->width; i++)
     {
@@ -80,7 +105,9 @@ int ***getPixelArray(char *bmpPath)
             }
         }
     }
-
-    return *(int****)pixelArray;
+	
+	p->rgbArray = pixels;
+	
+    return p;
 }
 

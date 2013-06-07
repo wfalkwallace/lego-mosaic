@@ -29,10 +29,26 @@ struct Header
     int important_colors;
 };
 
-struct Header *getHeader(char*);
+struct PixelArray
+{
+	int ***rgbArray;
+};
 
-void printHeader(struct Header*);
+struct bitmap
+{
+	char *filepath;
+	struct Header h;
+	struct PixelArray p;
+};
 
-int ***getPixelArray(char*);
+void openBMP(char*);
+
+void closeBMP();
+
+struct Header *getHeader();
+
+void printHeader();
+
+struct pixelArray *getPixelArray();
 
 #endif

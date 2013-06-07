@@ -12,13 +12,16 @@
 
 int main(int argc, const char * argv[])
 {
-    char *bmpPath = "/Users/wgf2104/Desktop/warning.bmp";
-    struct Header *h = getHeader(bmpPath);
-    printHeader(h);
-	int *** p = getPixelArray(bmpPath);
-	printf("got pixel array");
+    char bmpPath[] = "warning.bmp";
+	openBMP(bmpPath);
+	printf("Header:\n");
+    getHeader();
+    printHeader();
+	printf("________________________\nHeader:\n");
+	struct pixelArray *p = getPixelArray();
+	printf("\n\ngot pixel array; size-%lu", sizeof(p));
+	closeBMP();
 
-    
     return 0;
 }
 
