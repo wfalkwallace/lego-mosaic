@@ -12,16 +12,15 @@
 
 int main(int argc, const char * argv[])
 {
-    char bmpPath[] = "warning.bmp";
-	openBMP(bmpPath);
-	printf("Header:\n");
-    getHeader();
+    char bmpPath[] = "sample.bmp";
+	imgOpen(bmpPath);
+	printf("\nHeader:\n");
+    populateHeader();
     printHeader();
-	printf("________________________\nHeader:\n");
-	struct pixelArray *p = getPixelArray();
-	printf("\n\ngot pixel array; size-%lu", sizeof(p));
-	closeBMP();
-
+	printf("________________________\nPixel Array:\n");
+	populatePixelArray();
+	printf("got pixel array!");
+	imgClose();
     return 0;
 }
 

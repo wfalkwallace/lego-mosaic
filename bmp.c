@@ -1,5 +1,5 @@
 //
-//  bmp.c
+//  img.c
 //  lego-mosaic
 //
 //  Created by William Falk-Wallace on 1/2/13.
@@ -16,98 +16,114 @@ static void die(const char *message)
     perror(message);
     exit(1);
 }
-//global bmp file 
-FILE *bmpFile;
-//global header
-struct Header *h;
-//global pixel array
-struct pixelArray *p;
 
-//open global bmp file
-void openBMP(char *filepath)
+//one-time header struct
+struct Header
 {
-	bmpFile = fopen (filepath, "rb");
-    if (bmpFile == NULL)
-        die("valid BMP file not found");
+    char type[2];
+    int filesize;
+    short reserve1;
+    short reserve2;
+    int offset;
+    int header;
+    int width;
+    int height;
+    short color_planes;
+    short bitdepth;
+    int compression;
+    int imagesize;
+    int xres;
+    int yres;
+    int palettesize;
+    int important_colors;
+} header;
+
+//bmp file path
+FILE *imgFile;
+
+//open img file
+void imgOpen(char *filepath)
+{
+    if ((imgFile = fopen(filepath, "rb")) == NULL)
+        die("valid file not found");
 }
 
-//closes global bmp
-void closeBMP()
+//close imgFile
+void imgClose()
 {
 	//close the image
-    fclose(bmpFile);
+    fclose(imgFile);
 }
 
 /*
  * Header needs to be stripped
  * FREE NOT YET IMPLEMENTED
  */
-struct Header *getHeader()
+void populateHeader()
 {
-    //malloc header struct
-	h = (struct Header*) malloc(sizeof(struct Header));
-    if(h == NULL)
-        die("malloc failed");
-	
 	//populate header struct
-	//why is it having trouble with the first two bits? something char related?
-    fread(&(h->type), 2, 1, bmpFile);
-    fread(&(h->filesize), 52, 1, bmpFile);
-	//return header struct
-    return h;
+	//why is it having trouble with the first two bits? something char related.
+    fread(&(header.type), 2, 1, imgFile);
+    fread(&(header.filesize), 52, 1, imgFile);
 }
 
 void printHeader()
 {
-    printf("\nBitmap Type:%s\n", h->type);
-    printf("File Size:%d\n", h->filesize);
-    printf("Reserve 1:%hd\n", h->reserve1);
-    printf("Reserve 2:%hd\n", h->reserve2);
-    printf("Offset:%d\n", h->offset);
-    printf("Header Size:%d\n", h->header);
-    printf("Width:%d\n", h->width);
-    printf("Height:%d\n", h->height);
-    printf("Color Planes Used:%hd\n", h->color_planes);
-    printf("Bit Depth:%hd\n", h->bitdepth);
-    printf("Compression:%d\n", h->compression);
-    printf("Image Size:%d\n", h->imagesize);
-    printf("X Resolution (px/m):%d\n", h->xres);
-    printf("Y Resolution (px/m):%d\n", h->yres);
-    printf("Palette Size:%d\n", h->palettesize);
-    printf("Important Colors:%d\n\n", h->important_colors);
+    printf("\nBitmap Type:%s\n", header.type);
+    printf("File Size:%d\n", header.filesize);
+    printf("Reserve 1:%hd\n", header.reserve1);
+    printf("Reserve 2:%hd\n", header.reserve2);
+    printf("Offset:%d\n", header.offset);
+    printf("Header Size:%d\n", header.header);
+    printf("Width:%d\n", header.width);
+    printf("Height:%d\n", header.height);
+    printf("Color Planes Used:%hd\n", header.color_planes);
+    printf("Bit Depth:%hd\n", header.bitdepth);
+    printf("Compression:%d\n", header.compression);
+    printf("Image Size:%d\n", header.imagesize);
+    printf("X Resolution (px/m):%d\n", header.xres);
+    printf("Y Resolution (px/m):%d\n", header.yres);
+    printf("Palette Size:%d\n", header.palettesize);
+    printf("Important Colors:%d\n", header.important_colors);
 }
 
-//get the pixel array; return POINTER TO RGB pixel array struct, int****
-struct int ***getPixelArray()
+//get the pixel array
+void populatePixelArray()
 {
 	//skip the header
-    fseek(bmpFile, h->offset - 1, SEEK_SET);
-
-	//silly operator precedence
-	//pointer to 
-	int pixels[h->width][h->height][3];
+    fseek(imgFile, header.offset - 1, SEEK_SET);
 	
-	//malloc the array
-    pixels = (int***) malloc(h->width * h->height * 3);
-	if(pixels == NULL)
-        die("malloc failed");
+	unsigned char pixels[header.width][header.height][3];
 	
 	//populate the array
 	// i - width; j - height; k - R/G/B
     int i,j,k;
-    for(i=0; i < h->width; i++)
+    for(i=0; i < header.width; i++)
     {
-        for(j=0; j < h->height; j++)
+        for(j=0; j < header.height; j++)
         {
             for(k=0; k < 3; k++)
             {
-                fread(pixelArray[i][j][2-k], 1, 1, bmpFile);
+                fread(&pixels[i][j][2-k], 1, 1, imgFile);
+            }
+        }
+    }
+
+	for(i=0; i < header.width; i++)
+    {
+        for(j=0; j < header.height; j++)
+        {
+            for(k=0; k < 3; k++)
+            {
+				if(pixels[i][j][2-k] == 0)
+					pixels[i][j][2-k] += 100;
             }
         }
     }
 	
-	p->rgbArray = pixels;
-	
-    return p;
+	FILE *output = fopen("updated.bmp","wb");
+	fwrite(&header, 1, sizeof(header), output);
+	fwrite(&pixels, 1, sizeof(pixels), output);
+	fclose(output);
 }
 
