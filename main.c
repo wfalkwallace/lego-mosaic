@@ -17,9 +17,9 @@ int main(int argc, const char * argv[])
 	printf("\nHeader:\n");
     populateHeader();
     printHeader();
-	printf("________________________\nPixel Array:\n");
+	printf("________________________\n\nPixel Array:\n");
 	populatePixelArray();
-	printf("got pixel array!");
+	printf("\ngot pixel array!\n");
 	imgClose();
     return 0;
 }

@@ -20,22 +20,22 @@ static void die(const char *message)
 //header struct
 struct BMPHeader
 {
-    char type[2];
-    int filesize;
-    short reserve1;
-    short reserve2;
-    int offset;
-    int header;
-    int width;
-    int height;
-    short color_planes;
-    short bitdepth;
-    int compression;
-    int imagesize;
-    int xres;
-    int yres;
-    int palettesize;
-    int important_colors;
+    unsigned char type[2];
+    unsigned int filesize;
+    unsigned short reserve1;
+    unsigned short reserve2;
+    unsigned int offset;
+    unsigned int header;
+    unsigned int width;
+    unsigned int height;
+    unsigned short color_planes;
+    unsigned short bitdepth;
+    unsigned int compression;
+    unsigned int imagesize;
+    unsigned int xres;
+    unsigned int yres;
+    unsigned int palettesize;
+    unsigned int important_colors;
 } header;
 
 //img file path
@@ -51,25 +51,26 @@ void imgOpen(char *filepath)
 //close imgFile
 void imgClose()
 {
-	//close the image
+//close the image
     fclose(imgFile);
 }
 
 /*
- * Header needs to be stripped
- * TODO: FREE NOT YET IMPLEMENTED
- */
+* Header needs to be stripped
+* TODO: FREE NOT YET IMPLEMENTED
+*/
 void populateHeader()
 {
-	//populate header struct
-	//why is it having trouble with the first two bits? something char related.
+//populate header struct
+//why is it having trouble with the first two bits? something char related.
     fread(&(header.type), 2, 1, imgFile);
     fread(&(header.filesize), 52, 1, imgFile);
+    // fread(&(header.reserve1), 48, 1, imgFile);
 }
 
 void printHeader()
 {
-    printf("\nBitmap Type:%s\n", header.type);
+    printf("Bitmap Type:%s\n", header.type);
     printf("File Size:%d\n", header.filesize);
     printf("Reserve 1:%hd\n", header.reserve1);
     printf("Reserve 2:%hd\n", header.reserve2);
@@ -85,18 +86,35 @@ void printHeader()
     printf("Y Resolution (px/m):%d\n", header.yres);
     printf("Palette Size:%d\n", header.palettesize);
     printf("Important Colors:%d\n", header.important_colors);
+    
+    printf("\nBitmap Type:%x %x\n", header.type[0], header.type[1]);
+    printf("File Size:%x\n", header.filesize);
+    printf("Reserve 1:%x\n", header.reserve1);
+    printf("Reserve 2:%x\n", header.reserve2);
+    printf("Offset:%x\n", header.offset);
+    printf("Header Size:%x\n", header.header);
+    printf("Width:%x\n", header.width);
+    printf("Height:%x\n", header.height);
+    printf("Color Planes Used:%x\n", header.color_planes);
+    printf("Bit Depth:%x\n", header.bitdepth);
+    printf("Compression:%x\n", header.compression);
+    printf("Image Size:%x\n", header.imagesize);
+    printf("X Resolution (px/m):%x\n", header.xres);
+    printf("Y Resolution (px/m):%x\n", header.yres);
+    printf("Palette Size:%x\n", header.palettesize);
+    printf("Important Colors:%x\n", header.important_colors);
 }
 
 //get the pixel array
 void populatePixelArray()
 {
-	//skip the header
+//skip the header
     fseek(imgFile, header.offset - 1, SEEK_SET);
-	
-	unsigned char pixels[header.width][header.height][3];
-	
-	//populate the array
-	// i - width; j - height; k - R/G/B
+
+    unsigned int pixels[header.width][header.height][3];
+
+//populate the array
+// i - width; j - height; k - R/G/B
     int i,j,k;
     for(i=0; i < header.width; i++)
     {
@@ -105,25 +123,30 @@ void populatePixelArray()
             for(k=0; k < 3; k++)
             {
                 fread(&pixels[i][j][2-k], 1, 1, imgFile);
+                // printf("%d,", pixels[i][j][2-k]);
             }
         }
     }
 
-	for(i=0; i < header.width; i++)
-    {
-        for(j=0; j < header.height; j++)
-        {
-            for(k=0; k < 3; k++)
-            {
-				if(pixels[i][j][2-k] == 0)
-					pixels[i][j][2-k] += 100;
-            }
-        }
+    // for(i=0; i < header.width; i++)
+    // {
+    //     for(j=0; j < header.height; j++)
+    //     {
+    //         for(k=0; k < 3; k++)
+    //         {
+    //             if(pixels[i][j][2-k] == 0)
+    //                 pixels[i][j][2-k] += 10;
+    //         }
+    //     }
+    // }
+
+    FILE *output = fopen("updated.bmp","wb");
+    fwrite(&header, 1, sizeof(header), output);
+    for(j=0; j < header.height; j++){
+        fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
+        fprintf(output, "\n");
     }
-	
-	FILE *output = fopen("updated.bmp","wb");
-	fwrite(&header, 1, sizeof(header), output);
-	fwrite(&pixels, 1, sizeof(pixels), output);
-	fclose(output);
+    
+    fclose(output);
 }
 
