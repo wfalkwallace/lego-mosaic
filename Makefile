@@ -9,7 +9,7 @@ CXXFLAGS = -g -Wall $(INCLUDES)
 LDFLAGS = -g
 LDLIBS  =
 
-executables = main
+executables = main.out
 objects = main.o bmp.o
 
 .PHONY: default
