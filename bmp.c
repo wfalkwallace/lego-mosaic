@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "bmp.h"
+#include <stdint.h>
 
 static void die(const char *message)
 {
@@ -21,21 +22,21 @@ static void die(const char *message)
 struct BMPHeader
 {
     unsigned char type[2];
-    unsigned int filesize;
+    uint32_t filesize;
     unsigned short reserve1;
     unsigned short reserve2;
-    unsigned int offset;
-    unsigned int header;
-    unsigned int width;
-    unsigned int height;
+    uint32_t offset;
+    uint32_t header;
+    uint32_t width;
+    uint32_t height;
     unsigned short color_planes;
     unsigned short bitdepth;
-    unsigned int compression;
-    unsigned int imagesize;
-    unsigned int xres;
-    unsigned int yres;
-    unsigned int palettesize;
-    unsigned int important_colors;
+    uint32_t compression;
+    uint32_t imagesize;
+    uint32_t xres;
+    uint32_t yres;
+    uint32_t palettesize;
+    uint32_t important_colors;
 } header;
 
 //img file path
@@ -143,8 +144,7 @@ void populatePixelArray()
     FILE *output = fopen("updated.bmp","wb");
     fwrite(&header, 1, sizeof(header), output);
     for(j=0; j < header.height; j++){
-        fprintf(output, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        fwrite(&pixels[i], sizeof(pixels[i]), 1, output);
+        // fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
         // fprintf(output, "\n");
     }
     
