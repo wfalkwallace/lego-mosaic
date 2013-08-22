@@ -111,7 +111,7 @@ void populatePixelArray()
 //skip the header
     fseek(imgFile, header.offset - 1, SEEK_SET);
 
-    unsigned int pixels[header.width][header.height][3];
+    unsigned char pixels[header.width][header.height][3];
 
 //populate the array
 // i - width; j - height; k - R/G/B
@@ -144,7 +144,7 @@ void populatePixelArray()
     fwrite(&header, 1, sizeof(header), output);
     for(j=0; j < header.height; j++){
         fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
-        fprintf(output, "\n");
+        // fprintf(output, "\n");
     }
     
     fclose(output);
