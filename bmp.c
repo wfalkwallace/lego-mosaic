@@ -142,10 +142,25 @@ void populatePixelArray()
     // }
 
     FILE *output = fopen("updated.bmp","wb");
-    fwrite(&header, 1, sizeof(header), output);
+    fwrite(&header.type, 2, 1, output);
+    fwrite(&header.filesize, 1, 4, output);
+    fwrite(&header.reserve1, 1, 2, output);
+    fwrite(&header.reserve2, 1, 2, output);
+    fwrite(&header.offset, 1, 4, output);
+    fwrite(&header.header, 1, 4, output);
+    fwrite(&header.width, 1, 4, output);
+    fwrite(&header.height, 1, 4, output);
+    fwrite(&header.color_planes, 1, 2, output);
+    fwrite(&header.bitdepth, 1, 2, output);
+    fwrite(&header.compression, 1, 4, output);
+    fwrite(&header.imagesize, 1, 4, output);
+    fwrite(&header.xres, 1, 4, output);
+    fwrite(&header.yres, 1, 4, output);
+    fwrite(&header.palettesize, 1, 4, output);
+    fwrite(&header.important_colors, 1, 4, output);
+
     for(j=0; j < header.height; j++){
         // fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
-        // fprintf(output, "\n");
     }
     
     fclose(output);
