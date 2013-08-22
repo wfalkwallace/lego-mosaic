@@ -23,14 +23,14 @@ struct BMPHeader
 {
     unsigned char type[2];
     uint32_t filesize;
-    unsigned short reserve1;
-    unsigned short reserve2;
+    uint16_t reserve1;
+    uint16_t reserve2;
     uint32_t offset;
     uint32_t header;
     uint32_t width;
     uint32_t height;
-    unsigned short color_planes;
-    unsigned short bitdepth;
+    uint16_t color_planes;
+    uint16_t bitdepth;
     uint32_t compression;
     uint32_t imagesize;
     uint32_t xres;
@@ -159,8 +159,8 @@ void populatePixelArray()
     fwrite(&header.palettesize, 1, 4, output);
     fwrite(&header.important_colors, 1, 4, output);
 
-    for(j=0; j < header.height; j++){
-        // fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
+    for(i=0; i < header.height; i++){
+        fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
     }
     
     fclose(output);

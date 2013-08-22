@@ -14,12 +14,12 @@ int main(int argc, const char * argv[])
 {
     char bmpPath[] = "sample.bmp";
 	imgOpen(bmpPath);
-	printf("\nHeader:\n");
+	// printf("\nHeader:\n");
     populateHeader();
-    printHeader();
-	printf("________________________\n\nPixel Array:\n");
+    // printHeader();
+	// printf("________________________\n\nPixel Array:\n");
 	populatePixelArray();
-	printf("\ngot pixel array!\n");
+	printf("got pixel array!\n");
 	imgClose();
     return 0;
 }
