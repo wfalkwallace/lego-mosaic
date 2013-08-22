@@ -17,8 +17,8 @@ static void die(const char *message)
     exit(1);
 }
 
-//one-time header struct
-struct Header
+//header struct
+struct BMPHeader
 {
     char type[2];
     int filesize;
@@ -38,7 +38,7 @@ struct Header
     int important_colors;
 } header;
 
-//bmp file path
+//img file path
 FILE *imgFile;
 
 //open img file
@@ -57,7 +57,7 @@ void imgClose()
 
 /*
  * Header needs to be stripped
- * FREE NOT YET IMPLEMENTED
+ * TODO: FREE NOT YET IMPLEMENTED
  */
 void populateHeader()
 {
