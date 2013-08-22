@@ -143,7 +143,8 @@ void populatePixelArray()
     FILE *output = fopen("updated.bmp","wb");
     fwrite(&header, 1, sizeof(header), output);
     for(j=0; j < header.height; j++){
-        fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
+        fprintf(output, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        fwrite(&pixels[i], sizeof(pixels[i]), 1, output);
         // fprintf(output, "\n");
     }
     
