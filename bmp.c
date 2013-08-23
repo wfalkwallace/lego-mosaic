@@ -159,10 +159,17 @@ void populatePixelArray()
     fwrite(&header.palettesize, 1, 4, output);
     fwrite(&header.important_colors, 1, 4, output);
 
-    for(i=0; i < header.height; i++){
-        fwrite(&pixels[i], 1, sizeof(pixels[i]), output);
+    for(i=0; i < header.width; i++)
+    {
+        for(j=0; j < header.height; j++)
+        {
+            for(k=0; k < 3; k++)
+            {
+                fwrite(&pixels[i][j][2-k], 1, 1, output);
+            }
+        }
     }
-    
-    fclose(output);
+   
+   fclose(output);
 }
 
