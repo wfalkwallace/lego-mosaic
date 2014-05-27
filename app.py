@@ -1,13 +1,15 @@
 import os
 from flask import Flask
 from flask import request
+from flask import render_template
 from flask import redirect
 from flask import url_for
+from flask import send_from_directory
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 # image uploading settings
-UPLOAD_FOLDER = '/uploads'
+UPLOAD_FOLDER = '/vagrant/uploads'
 ALLOWED_EXTENSIONS = set(['png', 'PNG', 'jpg', 'JPG', 'jpeg', 'JPEG', 'gif', 'GIF'])
 
 # disable this for launch (~~ 'watch')
@@ -35,11 +37,10 @@ def hello():
 def upload_file():
     if request.method == 'POST':
         file = request.files['file']
-        if file and allowed_file(file.filename):
+        if file and allowed_file_extension(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file',
-                                    filename=filename))
+            return redirect(url_for('uploaded_file', filename=filename))
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -49,6 +50,10 @@ def upload_file():
          <input type=submit value=Upload>
     </form>
     '''
+
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
 # ---------------------------------------------------------------------------- #
@@ -63,8 +68,7 @@ def upload_file():
 
 
 def allowed_file_extension(filename):
-    return '.' in filename and 
-    filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+    return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
 # ---------------------------------------------------------------------------- #
