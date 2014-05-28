@@ -1,4 +1,4 @@
-Legosaic ![https://travis-ci.org/wfalkwallace/lego-mosaic.svg?branch=master]
+Legosaic [![Build Status](https://travis-ci.org/wfalkwallace/lego-mosaic.svg?branch=master)](https://travis-ci.org/wfalkwallace/lego-mosaic)
 
 ========
 *Lego Mosaic Generator*
