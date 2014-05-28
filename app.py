@@ -16,6 +16,8 @@ ALLOWED_EXTENSIONS = set(['png', 'PNG', 'jpg', 'JPG', 'jpeg', 'JPEG', 'gif', 'GI
 app.config["DEBUG"] = True
 # set app-wide uploads folder
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# limit image/upload max size to 16MB
+# app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
 # ---------------------------------------------------------------------------- #
