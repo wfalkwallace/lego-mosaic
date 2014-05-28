@@ -9,7 +9,6 @@ itsdangerous==0.24
 wsgiref==0.1.2
 GnuPGInterface==0.3.2
 apt-xapian-index==0.44
-argparse==1.2.1
 chardet==2.0.1
 command-not-found==0.2.44
 language-selector==0.1
