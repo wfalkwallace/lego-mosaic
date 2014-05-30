@@ -8,6 +8,8 @@ from flask import send_from_directory
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
+app.config.from_object('config.config')
+
 # image uploading settings
 UPLOAD_FOLDER = '/vagrant/uploads'
 ALLOWED_EXTENSIONS = set([

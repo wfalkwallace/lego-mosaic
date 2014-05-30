@@ -1,3 +1,4 @@
+
 """
 Collects settings from the environment and adds them to the app configuration.
 
