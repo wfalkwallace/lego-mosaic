@@ -47,8 +47,24 @@ def upload_file():
         file = request.files['file']
         if file and allowed_file_extension(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
+            # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            # return redirect(url_for('uploaded_file', filename=filename))
+
+            conn = S3Connection(settings.ACCESS_KEY, settings.SECRET_KEY)
+            bucket = conn.get_bucket(settings.BUCKET_NAME)
+            k = Key(bucket)
+            k.key = 'file_test.jpg'
+            # k.set_contents_from_file(data_file)
+            k.set_contents_from_string(data_file.readlines())
+
+            # return jsonify(name=file_name)
+            return jsonify(name=file_name)
+
+
+
+
+
+
     return '''
     <!doctype html>
     <title>Upload new File</title>
