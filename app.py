@@ -1,9 +1,9 @@
-import os
+# import os
 from flask import Flask
 from flask import request
 from flask import render_template
-from flask import redirect
-from flask import url_for
+# from flask import redirect
+# from flask import url_for
 from flask import send_from_directory
 from werkzeug.utils import secure_filename
 
@@ -49,24 +49,8 @@ def upload_file():
         file = request.files['file']
         if file and allowed_file_extension(file.filename):
             filename = secure_filename(file.filename)
-            # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            # return redirect(url_for('uploaded_file', filename=filename))
-
-            conn = S3Connection(settings.ACCESS_KEY, settings.SECRET_KEY)
-            bucket = conn.get_bucket(settings.BUCKET_NAME)
-            k = Key(bucket)
-            k.key = 'file_test.jpg'
-            # k.set_contents_from_file(data_file)
-            k.set_contents_from_string(data_file.readlines())
-
-            # return jsonify(name=file_name)
-            return jsonify(name=file_name)
-
-
-
-
-
-
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            return redirect(url_for('uploaded_file', filename=filename))
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -81,6 +65,11 @@ def upload_file():
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+
+@app.route('/result')
+def result():
+    return render_template("index.html")
 
 
 # -------------------------------------------------------------------------- #
@@ -99,6 +88,9 @@ def allowed_file_extension(filename):
         filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
+
+
+
 # -------------------------------------------------------------------------- #
 #                 _____  _____     _____ _______ _    _ ______ ______        #
 #           /\   |  __ \|  __ \   / ____|__   __| |  | |  ____|  ____|       #
@@ -110,9 +102,15 @@ def allowed_file_extension(filename):
 # -------------------------------------------------------------------------- #
 
 
+@app.errorhandler(500)
+def page_not_found(error):
+    return render_template("500.html"), 500
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template("404.html"), 404
+
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0")
