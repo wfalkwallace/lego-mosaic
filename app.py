@@ -74,7 +74,11 @@ def uploaded_file(filename):
 def result(filename):
     start = datetime.datetime.now()
 
-    output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0], "_mosaic", filename.rsplit('.', 1)[1])
+    output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0], 
+                                   "_mosaic", 
+                                   filename.rsplit('.', 1)[1]
+
+                                  )
 
     imagepath = url_for('uploaded_file', filename=filename)
     output_imagepath = url_for('uploaded_file', filename=output_filename)
