@@ -26,7 +26,7 @@
   <!--[if lt IE 7]>
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
   <![endif]-->
-  <div class="navbar navbar-blue navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -35,7 +35,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">
-          <img src="/static/img/linger-title-sm-clear.png" alt="logo">
+          <img src="/static/img/logos/favicon-32x32.png" alt="logo">
         </a>
       </div>
       <div class="navbar-collapse collapse">
@@ -57,34 +57,14 @@
   <div id="content">
     <div class="container push-down">
 
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="col-heading">
-            <h3 class="col-title">Contact us</h3>
-          </div>
-          <form role="form">
-            <div class="form-group">
-              <label class="sr-only" for="contact-name">Name</label>
-              <input type="text" class="form-control" id="contact-name" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="contact-phone">Phone</label>
-              <input type="tel" class="form-control" id="contact-phone" placeholder="Phone" required>
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="contact-email">Email*</label>
-              <input type="email" class="form-control" id="contact-email" placeholder="Email*" required>
-            </div>
-            <div class="form-group">
-              <label class="sr-only" for="contact-comments">Comments</label>
-              <textarea id="contact-comments" placeholder="Comments" class="form-control" rows="3"></textarea>
-            </div>
-            <div class="btn-group widen">
-              <button type="button" class="btn btn-green widen">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <img src="{{ filepath }}" height="500px">
+      <img src="{{ output }}" height="500px">
+      <p>
+        {{ size }}
+      </p>
+      <p>
+        {{ time }}
+      </p>
 
 
 
@@ -94,7 +74,7 @@
     </div>
 
     <footer class="text-center">
-      <p>&copy; Linger 2014 | <a href="/signup">Sign Up</a></p>
+    <p>&copy; 2014 | <a href="/signup">Sign Up</a></p>
     </footer>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>

@@ -1,17 +1,20 @@
-# import os
+import os
+import datetime
 from flask import Flask
 from flask import request
 from flask import render_template
-# from flask import redirect
-# from flask import url_for
+from flask import redirect
+from flask import url_for
 from flask import send_from_directory
 from werkzeug.utils import secure_filename
+# PIL Pillow imports
+from PIL import Image
 
 app = Flask(__name__)
 app.config.from_object('config.config')
 
 # image uploading settings
-UPLOAD_FOLDER = '/vagrant/uploads'
+UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = set([
     'png', 'PNG',
     'jpg', 'JPG',
@@ -50,7 +53,7 @@ def upload_file():
         if file and allowed_file_extension(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
+            return redirect(url_for('mosaic', filename=filename))
     return '''
     <!doctype html>
     <title>Upload new File</title>
@@ -67,9 +70,64 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 
-@app.route('/result')
-def result():
-    return render_template("index.html")
+@app.route('/mosaic/<filename>')
+def result(filename):
+    start = datetime.datetime.now()
+
+    output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0], "_mosaic", filename.rsplit('.', 1)[1])
+
+    imagepath = url_for('uploaded_file', filename=filename)
+    output_imagepath = url_for('uploaded_file', filename=output_filename)
+
+    filepath = '%s%s' % (app.config['UPLOAD_FOLDER'], filename)
+    output_filepath = '%s%s' % (app.config['UPLOAD_FOLDER'], output_filename)
+
+    image = Image.open(filepath)
+    size = image.size
+
+    width = size[0]
+    height = size[1]
+
+    num_buckets_x = 15
+    num_buckets_y = 10
+
+    bucket_size_x = size[0] / num_buckets_x
+    bucket_size_y = size[1] / num_buckets_y
+
+    for x in range(0, num_buckets_x):
+        for y in range(0, num_buckets_y):
+            window_bounds = (x * bucket_size_x, y * bucket_size_y, x * bucket_size_x + bucket_size_x, y * bucket_size_y + bucket_size_y)
+            window = image.crop(window_bounds)            
+            window = window.transpose(Image.ROTATE_180)
+            image.paste(window, window_bounds)
+
+            # count = 0
+            # total = (0, 0, 0)
+            # for window_x in range(x,x + bucket_size_x):
+            #     for window_y in range(y,y + bucket_size_y):
+            #         # print 'pixel: %s, %s' % (window_x, window_y)
+            #         # r, g, b = image.getpixel((window_x, window_y))
+            #         pixel = image.getpixel((window_x, window_y))
+            #         total = tuple(map(sum,zip(total,pixel)))
+            #         count += 1
+
+            # avg = tuple(val*20/count for val in total)
+            # # print '%s - %s' % ('count', count)
+            # # print '%s - %s' % ('total', total)
+            # # print '%s - %s' % ('  avg', avg)
+
+            # for window_x in range(x,x + bucket_size_x):
+            #     for window_y in range(y,y + bucket_size_y):
+            #         image.putpixel((window_x, window_y), avg)
+    
+    image.save(output_filepath)
+    time = datetime.datetime.now() - start
+
+    return render_template("show.html", 
+                            filepath=imagepath, 
+                            output=output_imagepath,
+                            size=size,
+                            time=time)
 
 
 # -------------------------------------------------------------------------- #
@@ -86,7 +144,6 @@ def result():
 def allowed_file_extension(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
 
 
 
