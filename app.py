@@ -77,7 +77,6 @@ def result(filename):
     output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0], 
                                    "_mosaic", 
                                    filename.rsplit('.', 1)[1]
-
                                   )
 
     imagepath = url_for('uploaded_file', filename=filename)
