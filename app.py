@@ -88,41 +88,41 @@ def result(filename):
     width = size[0]
     height = size[1]
 
-    num_buckets_x = 15
-    num_buckets_y = 10
+    num_buckets_x = 75
+    num_buckets_y = 70
 
     bucket_size_x = size[0] / num_buckets_x
     bucket_size_y = size[1] / num_buckets_y
 
     for x in range(0, num_buckets_x):
         for y in range(0, num_buckets_y):
-            window_bounds = (x * bucket_size_x, y * bucket_size_y, x * bucket_size_x + bucket_size_x, y * bucket_size_y + bucket_size_y)
+
+            window_left = x * bucket_size_x
+            window_upper = y * bucket_size_y
+            window_right = window_left + bucket_size_x
+            window_lower = window_upper + bucket_size_y
+
+            window_bounds = (window_left,
+                             window_upper,
+                             window_right,
+                             window_lower
+                            )
             window = image.crop(window_bounds)            
-            window = window.transpose(Image.ROTATE_180)
+
+            count = avg = 0
+            total = (0, 0, 0)
+            for window_x in range(0, bucket_size_x):
+                for window_y in range(0, bucket_size_y):
+                    pixel = window.getpixel((window_x, window_y))
+                    total = tuple(map(sum,zip(total,pixel)))
+                    count += 1
+            avg = tuple(val/count for val in total)
+            for window_x in range(0, bucket_size_x):
+                for window_y in range(0, bucket_size_y):
+                    window.putpixel((window_x, window_y), avg)
             image.paste(window, window_bounds)
-
-            # count = 0
-            # total = (0, 0, 0)
-            # for window_x in range(x,x + bucket_size_x):
-            #     for window_y in range(y,y + bucket_size_y):
-            #         # print 'pixel: %s, %s' % (window_x, window_y)
-            #         # r, g, b = image.getpixel((window_x, window_y))
-            #         pixel = image.getpixel((window_x, window_y))
-            #         total = tuple(map(sum,zip(total,pixel)))
-            #         count += 1
-
-            # avg = tuple(val*20/count for val in total)
-            # # print '%s - %s' % ('count', count)
-            # # print '%s - %s' % ('total', total)
-            # # print '%s - %s' % ('  avg', avg)
-
-            # for window_x in range(x,x + bucket_size_x):
-            #     for window_y in range(y,y + bucket_size_y):
-            #         image.putpixel((window_x, window_y), avg)
-    
     image.save(output_filepath)
     time = datetime.datetime.now() - start
-
     return render_template("show.html", 
                             filepath=imagepath, 
                             output=output_imagepath,
