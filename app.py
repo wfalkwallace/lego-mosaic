@@ -107,8 +107,8 @@ def uploaded_file(filename):
 def result(filename):
     start = datetime.datetime.now()
 
-    output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0], 
-                                   "_mosaic", 
+    output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0],
+                                   "_mosaic",
                                    filename.rsplit('.', 1)[1]
                                   )
 
@@ -137,9 +137,9 @@ def result(filename):
     bucket_size_x = width / num_buckets_x
     bucket_size_y = height / num_buckets_y
 
-    image_bounds = (0, 
-                    0, 
-                    num_buckets_x * bucket_size_x, 
+    image_bounds = (0,
+                    0,
+                    num_buckets_x * bucket_size_x,
                     num_buckets_y * bucket_size_y
                    )
     image = image.crop(image_bounds)
@@ -157,7 +157,7 @@ def result(filename):
                              window_right,
                              window_lower
                             )
-            window = image.crop(window_bounds)            
+            window = image.crop(window_bounds)
 
             count = avg = 0
             total = (0, 0, 0)
@@ -169,7 +169,8 @@ def result(filename):
             avg = tuple(val/count for val in total)
             avg_hex = int('0x%x%x%x' % (avg[0], avg[1], avg[2]), 16)
 
-            _, closest = min(colors.items(), key=lambda (k, v): abs(k - avg_hex))
+            _, closest = min(colors.items(),
+                             key=lambda (k, v): abs(k - avg_hex))
             avg = tuple(int(val) for val in re.findall("\d+", closest['rgb']))
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
@@ -177,11 +178,12 @@ def result(filename):
             image.paste(window, window_bounds)
     image.save(output_filepath)
     time = datetime.datetime.now() - start
-    return render_template("show.html", 
-                            filepath=imagepath, 
+    return render_template("show.html",
+                            filepath=imagepath,
                             output=output_imagepath,
                             image_size=size,
-                            physical_size=(width_in_bricks, height_in_bricks),
+                            physical_size=(width_in_bricks,
+                                           height_in_bricks),
                             time=time)
 
 
