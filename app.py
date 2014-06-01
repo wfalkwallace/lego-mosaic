@@ -11,6 +11,7 @@ from flask import send_from_directory
 from werkzeug.utils import secure_filename
 # PIL Pillow imports
 from PIL import Image
+from PIL import ImageStat
 
 app = Flask(__name__)
 app.config.from_object('config.config')
@@ -32,18 +33,13 @@ def allowed_file_extension(filename):
         filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
-def build_dictionary(attr_file, data="default"):
+def build_dictionary(attr_file):
     with open(attr_file) as f:
         attributes = json.loads(f.read())
-    if(data is "colors"):
-        tmp = {}
-        for key, value in attributes.items():
-            tmp[int(key, 16)] = value
-        attributes = tmp
     return attributes
 
 
-colors = build_dictionary('data/colors.json', 'colors')
+colors = build_dictionary('data/colors.json')
 brick_sizes = build_dictionary('data/brick_sizes.json')
 
 # image uploading settings
@@ -156,19 +152,17 @@ def result(filename):
                              window_lower)
             window = image.crop(window_bounds)
 
-            count = avg = 0
-            total = (0, 0, 0)
-            for window_x in range(0, bucket_size_x):
-                for window_y in range(0, bucket_size_y):
-                    pixel = window.getpixel((window_x, window_y))
-                    total = tuple(map(sum, zip(total, pixel)))
-                    count += 1
-            avg = tuple(val/count for val in total)
-            avg_hex = int('0x%x%x%x' % (avg[0], avg[1], avg[2]), 16)
+            pix_ct = bucket_size_x * bucket_size_y
+            avg = tuple(int(val/pix_ct) for val in ImageStat.Stat(window).sum)
 
-            _, closest = min(colors.items(),
-                             key=lambda (k, v): abs(k - avg_hex))
-            avg = tuple(int(val) for val in re.findall("\d+", closest['rgb']))
+            _, closest = min(
+                colors.items(),
+                key=lambda (_, v): abs(v['rgb']['red'] - avg[0]) + \
+                                   abs(v['rgb']['green'] - avg[1]) + \
+                                   abs(v['rgb']['blue'] - avg[2]))
+
+            avg = tuple(v for (k, v) in closest['rgb'].items())
+            
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
                     window.putpixel((window_x, window_y), avg)
