@@ -1,5 +1,6 @@
 import os
-from os import path
+import re
+import json
 import datetime
 from flask import Flask
 from flask import request
@@ -14,6 +15,37 @@ from PIL import Image
 app = Flask(__name__)
 app.config.from_object('config.config')
 
+
+# -------------------------------------------------------------------------- #
+#              _    _ ______ _      _____  ______ _____   _____              #
+#             | |  | |  ____| |    |  __ \|  ____|  __ \ / ____|             #
+#             | |__| | |__  | |    | |__) | |__  | |__) | (___               #
+#             |  __  |  __| | |    |  ___/|  __| |  _  / \___ \              #
+#             | |  | | |____| |____| |    | |____| | \ \ ____) |             #
+#             |_|  |_|______|______|_|    |______|_|  \_\_____/              #
+#                                                                            #
+# -------------------------------------------------------------------------- #
+
+
+def allowed_file_extension(filename):
+    return '.' in filename and \
+        filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+
+def build_dictionary(attr_file, data="default"):
+    with open(attr_file) as f:
+        attributes = json.loads(f.read())
+    if(data is "colors"):
+        tmp = {}
+        for key, value in attributes.items():
+            tmp[int(key, 16)] = value
+        attributes = tmp
+    return attributes
+
+
+colors = build_dictionary('data/colors.json', 'colors')
+brick_sizes = build_dictionary('data/brick_sizes.json')
+
 # image uploading settings
 UPLOAD_FOLDER = 'uploads/'
 ALLOWED_EXTENSIONS = set([
@@ -22,14 +54,6 @@ ALLOWED_EXTENSIONS = set([
     'jpeg', 'JPEG',
     'gif', 'GIF'
 ])
-
-colors = attributes.build_dictionary(
-    '{}/{}'.format(path.dirname(path.abspath(__file__)),
-                   'data/colors.json'))
-
-brick_sizes = attributes.build_dictionary(
-    '{}/{}'.format(path.dirname(path.abspath(__file__)),
-                   'data/brick_sizes.json'))
 
 # disable this for launch (~~ 'watch')
 app.config["DEBUG"] = True
@@ -143,8 +167,10 @@ def result(filename):
                     total = tuple(map(sum,zip(total,pixel)))
                     count += 1
             avg = tuple(val/count for val in total)
-            avg_hex = '0x%x%x%x' % (avg[0], avg[1], avg[2]) 
+            avg_hex = int('0x%x%x%x' % (avg[0], avg[1], avg[2]), 16)
 
+            _, closest = min(colors.items(), key=lambda (k, v): abs(k - avg_hex))
+            avg = tuple(int(val) for val in re.findall("\d+", closest['rgb']))
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
                     window.putpixel((window_x, window_y), avg)
@@ -157,30 +183,6 @@ def result(filename):
                             image_size=size,
                             physical_size=(width_in_bricks, height_in_bricks),
                             time=time)
-
-
-# -------------------------------------------------------------------------- #
-#              _    _ ______ _      _____  ______ _____   _____              #
-#             | |  | |  ____| |    |  __ \|  ____|  __ \ / ____|             #
-#             | |__| | |__  | |    | |__) | |__  | |__) | (___               #
-#             |  __  |  __| | |    |  ___/|  __| |  _  / \___ \              #
-#             | |  | | |____| |____| |    | |____| | \ \ ____) |             #
-#             |_|  |_|______|______|_|    |______|_|  \_\_____/              #
-#                                                                            #
-# -------------------------------------------------------------------------- #
-
-
-def allowed_file_extension(filename):
-    return '.' in filename and \
-        filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
-
-
-def build_dictionary(attr_file):
-    with open(attr_file) as f:
-        table_attributes = json.loads(f.read())
-    for key, value in table_attributes['columns'].items():
-        table_attributes['columns'][key]['converter'] = converter_types[value['type']]
-    return table_attributes
 
 
 # -------------------------------------------------------------------------- #
