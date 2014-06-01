@@ -1,4 +1,5 @@
 import os
+from os import path
 import datetime
 from flask import Flask
 from flask import request
@@ -21,6 +22,14 @@ ALLOWED_EXTENSIONS = set([
     'jpeg', 'JPEG',
     'gif', 'GIF'
 ])
+
+colors = attributes.build_dictionary(
+    '{}/{}'.format(path.dirname(path.abspath(__file__)),
+                   'data/colors.json'))
+
+brick_sizes = attributes.build_dictionary(
+    '{}/{}'.format(path.dirname(path.abspath(__file__)),
+                   'data/brick_sizes.json'))
 
 # disable this for launch (~~ 'watch')
 app.config["DEBUG"] = True
@@ -91,11 +100,25 @@ def result(filename):
     width = size[0]
     height = size[1]
 
-    num_buckets_x = 75
-    num_buckets_y = 70
+    physical_width = 800
+    physical_height = physical_width * height / width
+    mm_per_brick_x = 16
+    mm_per_brick_y = 9.6
+    width_in_bricks = physical_width / mm_per_brick_x
+    height_in_bricks = int(physical_height / mm_per_brick_y)
 
-    bucket_size_x = size[0] / num_buckets_x
-    bucket_size_y = size[1] / num_buckets_y
+    num_buckets_x = width_in_bricks
+    num_buckets_y = height_in_bricks
+
+    bucket_size_x = width / num_buckets_x
+    bucket_size_y = height / num_buckets_y
+
+    image_bounds = (0, 
+                    0, 
+                    num_buckets_x * bucket_size_x, 
+                    num_buckets_y * bucket_size_y
+                   )
+    image = image.crop(image_bounds)
 
     for x in range(0, num_buckets_x):
         for y in range(0, num_buckets_y):
@@ -120,6 +143,8 @@ def result(filename):
                     total = tuple(map(sum,zip(total,pixel)))
                     count += 1
             avg = tuple(val/count for val in total)
+            avg_hex = '0x%x%x%x' % (avg[0], avg[1], avg[2]) 
+
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
                     window.putpixel((window_x, window_y), avg)
@@ -129,7 +154,8 @@ def result(filename):
     return render_template("show.html", 
                             filepath=imagepath, 
                             output=output_imagepath,
-                            size=size,
+                            image_size=size,
+                            physical_size=(width_in_bricks, height_in_bricks),
                             time=time)
 
 
@@ -149,6 +175,12 @@ def allowed_file_extension(filename):
         filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
+def build_dictionary(attr_file):
+    with open(attr_file) as f:
+        table_attributes = json.loads(f.read())
+    for key, value in table_attributes['columns'].items():
+        table_attributes['columns'][key]['converter'] = converter_types[value['type']]
+    return table_attributes
 
 
 # -------------------------------------------------------------------------- #
