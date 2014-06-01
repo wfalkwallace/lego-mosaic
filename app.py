@@ -162,7 +162,7 @@ def result(filename):
                                    abs(v['rgb']['blue'] - avg[2]))
 
             avg = tuple(v for (k, v) in closest['rgb'].items())
-            
+
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
                     window.putpixel((window_x, window_y), avg)
