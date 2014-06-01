@@ -109,8 +109,7 @@ def result(filename):
 
     output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0],
                                    "_mosaic",
-                                   filename.rsplit('.', 1)[1]
-                                  )
+                                   filename.rsplit('.', 1)[1])
 
     imagepath = url_for('uploaded_file', filename=filename)
     output_imagepath = url_for('uploaded_file', filename=output_filename)
@@ -140,8 +139,7 @@ def result(filename):
     image_bounds = (0,
                     0,
                     num_buckets_x * bucket_size_x,
-                    num_buckets_y * bucket_size_y
-                   )
+                    num_buckets_y * bucket_size_y)
     image = image.crop(image_bounds)
 
     for x in range(0, num_buckets_x):
@@ -155,8 +153,7 @@ def result(filename):
             window_bounds = (window_left,
                              window_upper,
                              window_right,
-                             window_lower
-                            )
+                             window_lower)
             window = image.crop(window_bounds)
 
             count = avg = 0
@@ -164,7 +161,7 @@ def result(filename):
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
                     pixel = window.getpixel((window_x, window_y))
-                    total = tuple(map(sum,zip(total,pixel)))
+                    total = tuple(map(sum, zip(total, pixel)))
                     count += 1
             avg = tuple(val/count for val in total)
             avg_hex = int('0x%x%x%x' % (avg[0], avg[1], avg[2]), 16)
@@ -179,12 +176,12 @@ def result(filename):
     image.save(output_filepath)
     time = datetime.datetime.now() - start
     return render_template("show.html",
-                            filepath=imagepath,
-                            output=output_imagepath,
-                            image_size=size,
-                            physical_size=(width_in_bricks,
-                                           height_in_bricks),
-                            time=time)
+                           filepath=imagepath,
+                           output=output_imagepath,
+                           image_size=size,
+                           physical_size=(width_in_bricks,
+                                          height_in_bricks),
+                           time=time)
 
 
 # -------------------------------------------------------------------------- #
@@ -199,7 +196,7 @@ def result(filename):
 
 
 @app.errorhandler(500)
-def page_not_found(error):
+def server_error(error):
     return render_template("500.html"), 500
 
 
@@ -209,4 +206,4 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-  app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0")
