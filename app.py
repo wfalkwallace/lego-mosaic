@@ -1,5 +1,4 @@
 import os
-import re
 import json
 import datetime
 from flask import Flask
@@ -152,16 +151,17 @@ def result(filename):
                              window_lower)
             window = image.crop(window_bounds)
 
-            pix_ct = bucket_size_x * bucket_size_y
-            avg = tuple(int(val/pix_ct) for val in ImageStat.Stat(window).sum)
+            window_sum = ImageStat.Stat(window).sum
+            window_count = ImageStat.Stat(window).count
+            avg = tuple(int(val/window_count) for val in window_sum)
 
             _, closest = min(
                 colors.items(),
-                key=lambda (_, v): abs(v['rgb']['red'] - avg[0]) + \
-                                   abs(v['rgb']['green'] - avg[1]) + \
-                                   abs(v['rgb']['blue'] - avg[2]))
+                key=lambda (_, v): abs(v['rgb']['red'] - avg[0]) +
+                abs(v['rgb']['green'] - avg[1]) +
+                abs(v['rgb']['blue'] - avg[2]))
 
-            avg = tuple(v for (k, v) in closest['rgb'].items())
+            avg = tuple(v for (_, v) in closest['rgb'].items())
 
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
