@@ -153,7 +153,8 @@ def result(filename):
 
             window_sum = ImageStat.Stat(window).sum
             window_count = ImageStat.Stat(window).count
-            avg = tuple(int(val/window_count) for val in window_sum)
+
+            avg = tuple(int(val/window_count[0]) for val in window_sum)
 
             _, closest = min(
                 colors.items(),
