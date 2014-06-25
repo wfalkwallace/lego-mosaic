@@ -47,7 +47,7 @@
   <!--[if lt IE 7]>
   <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
   <![endif]-->
-  <div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -55,22 +55,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">
-          <img src="/static/img/logos/favicon-32x32.png" alt="logo">
-        </a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li class="active"><a href="/contact">Contact</a></li>
+          <li><a href="/upload">Home</a></li>
+          <!-- <li><a href="/about">About</a></li> -->
+          <!-- <li class="active"><a href="/contact">Contact</a></li> -->
         </ul>
-        <form class="navbar-form navbar-right" action="/signup" method="post">
+<!--         <form class="navbar-form navbar-right" action="/signup" method="post">
           <div class="form-group">
             <input type="email" name="register_email" placeholder="Email" class="form-control">
           </div>
           <button type="submit" class="btn btn-green">Sign up</button>
-        </form>
+        </form> -->
       </div><!--/.navbar-collapse -->
     </div>
   </div>
@@ -80,17 +77,41 @@
 
       <img src="{{ filepath }}" width="500px">
       <img src="{{ output }}" width="500px">
-      <p>
-        {{ image_size }}
-      </p>
-      <p>
-        {{ physical_size }}
-      </p>
-      <p>
-        {{ time }}
-      </p>
-
-
+      <div class="row">
+        <div class="col-md-2">
+          <p>
+          image size: {{ image_size }}
+          </p>
+        </div>
+        <div class="col-md-2">
+          <p>
+            lego size: {{ physical_size }}
+          </p>
+        </div>
+        <div class="col-md-3">
+          <p>
+            computation time: {{ time }}
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="widen">
+          <tr>
+            <th>Color ID</th>
+            <th>Color Name</th>
+            <th>Count</th>
+          </tr>
+            {% for (lego_id, count) in bom | dictsort %}
+            <tr>
+              <td>{{ lego_id }}</td>
+              <td>{{ colors[lego_id]['color'] }}</td>
+              <td>{{ count }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+        </div>
+      </div>
 
 
 
