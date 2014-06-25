@@ -122,8 +122,8 @@ def mosaic(filename):
 
     physical_width = 800
     physical_height = physical_width * height / width
-    mm_per_brick_x = 16
-    mm_per_brick_y = 9.6
+    mm_per_brick_x = brick_sizes['1x2']['width']
+    mm_per_brick_y = brick_sizes['1x2']['height']
     width_in_bricks = physical_width / mm_per_brick_x
     height_in_bricks = int(physical_height / mm_per_brick_y)
 
