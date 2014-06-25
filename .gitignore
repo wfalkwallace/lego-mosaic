@@ -2,3 +2,4 @@ uploads/
 *.prod
 extras
 *.pyc
+static/css/main.css
