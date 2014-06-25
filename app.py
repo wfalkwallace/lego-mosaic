@@ -100,8 +100,9 @@ def uploaded_file(filename):
 
 
 @app.route('/mosaic/<filename>')
-def result(filename):
+def mosaic(filename):
     start = datetime.datetime.now()
+    bom = {}
 
     output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0],
                                    "_mosaic",
@@ -157,13 +158,19 @@ def result(filename):
 
             avg = tuple(int(val/window_count[0]) for val in window_sum)
 
-            (h, _, _) = colorsys.rgb_to_hsv(avg[0], avg[1], avg[2])
+            (hue, sat, val) = colorsys.rgb_to_hsv(avg[0]/255.0, avg[1]/255.0, avg[2]/255.0)
 
             _, closest = min(
                 colors.items(),
-                key=lambda (_, v): abs(v['hsv']['hue'] - h))
+                key=lambda (_, v): abs(v['hsv']['hue'] - hue) +
+                                   abs(v['hsv']['saturation'] - sat) +
+                                   abs(v['hsv']['value'] - val))
 
-            avg = tuple(v for (_, v) in closest['rgb'].items())
+            bom[closest['lego_id']] = bom.get(closest['lego_id'], 0) + 1
+
+            avg = (closest['rgb']['red'],
+                   closest['rgb']['green'],
+                   closest['rgb']['blue'])
 
             for window_x in range(0, bucket_size_x):
                 for window_y in range(0, bucket_size_y):
@@ -177,6 +184,8 @@ def result(filename):
                            image_size=size,
                            physical_size=(width_in_bricks,
                                           height_in_bricks),
+                           colors=colors,
+                           bom=bom,
                            time=time)
 
 
