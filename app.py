@@ -103,6 +103,7 @@ def uploaded_file(filename):
 def mosaic(filename):
     start = datetime.datetime.now()
     bom = {}
+    brick_type = '1x2'
 
     output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0],
                                    "_mosaic",
@@ -122,8 +123,8 @@ def mosaic(filename):
 
     physical_width = 800
     physical_height = physical_width * height / width
-    mm_per_brick_x = brick_sizes['1x2']['width']
-    mm_per_brick_y = brick_sizes['1x2']['height']
+    mm_per_brick_x = brick_sizes[brick_type]['width']
+    mm_per_brick_y = brick_sizes[brick_type]['height']
     width_in_bricks = physical_width / mm_per_brick_x
     height_in_bricks = int(physical_height / mm_per_brick_y)
 
@@ -185,6 +186,7 @@ def mosaic(filename):
                            physical_size=(width_in_bricks,
                                           height_in_bricks),
                            colors=colors,
+                           brick_type=brick_type,
                            bom=bom,
                            time=time)
 

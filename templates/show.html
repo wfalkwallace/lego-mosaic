@@ -106,7 +106,7 @@
             {% for (lego_id, count) in bom | dictsort %}
             <tr>
               <td>{{ lego_id }}</td>
-              <td>Brick 1x2</td>
+              <td>Brick {{ brick_type }}</td>
               <td>{{ colors[lego_id]['color'] }}</td>
               <td>{{ count }}</td>
             </tr>
