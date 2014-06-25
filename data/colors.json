@@ -1,1112 +1,1667 @@
 {
-    "0xf2f3f2": {
-        "lego_id": 1,
-        "color": "White",
-        "hex": "#f2f3f2",
-        "rgb": {
-            "red": 242,
-            "green": 243,
-            "blue": 242
-        }
-    },
-    "0xa1a5a2": {
-        "lego_id": 2,
-        "color": "Grey",
-        "hex": "#a1a5a2",
-        "rgb": {
-            "red": 161,
-            "green": 165,
-            "blue": 162
-        }
-    },
-    "0xf9e999": {
-        "lego_id": 3,
-        "color": "Light yellow",
-        "hex": "#f9e999",
-        "rgb": {
-            "red": 249,
-            "green": 233,
-            "blue": 153
-        }
-    },
-    "0xd7c599": {
-        "lego_id": 5,
-        "color": "Brick yellow",
-        "hex": "#d7c599",
-        "rgb": {
-            "red": 215,
-            "green": 197,
-            "blue": 153
-        }
-    },
-    "0xc2dab8": {
-        "lego_id": 6,
-        "color": "Light green",
-        "hex": "#c2dab8",
-        "rgb": {
-            "red": 194,
-            "green": 218,
-            "blue": 184
-        }
-    },
-    "0xe8bac7": {
-        "lego_id": 9,
-        "color": "Light reddish violet",
-        "hex": "#e8bac7",
-        "rgb": {
-            "red": 232,
-            "green": 186,
-            "blue": 199
-        }
-    },
-    "0xcb8442": {
-        "lego_id": 12,
-        "color": "Light orange brown",
-        "hex": "#cb8442",
-        "rgb": {
-            "red": 203,
-            "green": 132,
-            "blue": 66
-        }
-    },
-    "0xcc8e68": {
-        "lego_id": 18,
-        "color": "Nougat",
-        "hex": "#cc8e68",
-        "rgb": {
-            "red": 204,
-            "green": 142,
-            "blue": 104
-        }
-    },
-    "0xc4281b": {
-        "lego_id": 21,
-        "color": "Bright red",
-        "hex": "#c4281b",
-        "rgb": {
-            "red": 196,
-            "green": 40,
-            "blue": 27
-        }
-    },
-    "0xc470a0": {
-        "lego_id": 22,
-        "color": "Med. reddish violet",
-        "hex": "#c470a0",
-        "rgb": {
-            "red": 196,
-            "green": 112,
-            "blue": 160
-        }
-    },
-    "0x0d69ab": {
-        "lego_id": 23,
-        "color": "Bright blue",
-        "hex": "#0d69ab",
-        "rgb": {
-            "red": 13,
-            "green": 105,
-            "blue": 171
-        }
-    },
-    "0xf5cd2f": {
-        "lego_id": 24,
-        "color": "Bright yellow",
-        "hex": "#f5cd2f",
-        "rgb": {
-            "red": 245,
-            "green": 205,
-            "blue": 47
-        }
-    },
-    "0x624732": {
-        "lego_id": 25,
-        "color": "Earth orange",
-        "hex": "#624732",
-        "rgb": {
-            "red": 98,
-            "green": 71,
-            "blue": 50
-        }
-    },
-    "0x1b2a34": {
-        "lego_id": 26,
-        "color": "Black",
-        "hex": "#1b2a34",
-        "rgb": {
-            "red": 27,
-            "green": 42,
-            "blue": 52
-        }
-    },
-    "0x6d6e6c": {
-        "lego_id": 27,
-        "color": "Dark grey",
-        "hex": "#6d6e6c",
-        "rgb": {
-            "red": 109,
-            "green": 110,
-            "blue": 108
-        }
-    },
-    "0x287f46": {
-        "lego_id": 28,
-        "color": "Dark green",
-        "hex": "#287f46",
-        "rgb": {
-            "red": 40,
-            "green": 127,
-            "blue": 70
-        }
-    },
-    "0xa1c48b": {
-        "lego_id": 29,
-        "color": "Medium green",
-        "hex": "#a1c48b",
-        "rgb": {
-            "red": 161,
-            "green": 196,
-            "blue": 139
-        }
-    },
-    "0xf3cf9b": {
-        "lego_id": 36,
-        "color": "Lig. Yellowich orange",
-        "hex": "#f3cf9b",
-        "rgb": {
-            "red": 243,
-            "green": 207,
-            "blue": 155
-        }
-    },
-    "0x4b974a": {
-        "lego_id": 37,
-        "color": "Bright green",
-        "hex": "#4b974a",
-        "rgb": {
-            "red": 75,
-            "green": 151,
-            "blue": 74
-        }
-    },
-    "0xa05f34": {
-        "lego_id": 38,
-        "color": "Dark orange",
-        "hex": "#a05f34",
-        "rgb": {
-            "red": 160,
-            "green": 95,
-            "blue": 52
-        }
-    },
-    "0xc1cade": {
-        "lego_id": 39,
-        "color": "Light bluish violet",
-        "hex": "#c1cade",
-        "rgb": {
-            "red": 193,
-            "green": 202,
-            "blue": 222
-        }
-    },
-    "0xb4d2e3": {
-        "lego_id": 45,
-        "color": "Light blue",
-        "hex": "#b4d2e3",
-        "rgb": {
-            "red": 180,
-            "green": 210,
-            "blue": 227
-        }
-    },
-    "0xeec4b6": {
-        "lego_id": 100,
-        "color": "Light red",
-        "hex": "#eec4b6",
-        "rgb": {
-            "red": 238,
-            "green": 196,
-            "blue": 182
-        }
-    },
-    "0xda8679": {
-        "lego_id": 101,
-        "color": "Medium red",
-        "hex": "#da8679",
-        "rgb": {
-            "red": 218,
-            "green": 134,
-            "blue": 121
-        }
-    },
-    "0x6e99c9": {
-        "lego_id": 102,
-        "color": "Medium blue",
-        "hex": "#6e99c9",
-        "rgb": {
-            "red": 110,
-            "green": 153,
-            "blue": 201
-        }
-    },
-    "0xc7c1b7": {
-        "lego_id": 103,
-        "color": "Light grey",
-        "hex": "#c7c1b7",
-        "rgb": {
-            "red": 199,
-            "green": 193,
-            "blue": 183
-        }
-    },
-    "0x6b327b": {
-        "lego_id": 104,
-        "color": "Bright violet",
-        "hex": "#6b327b",
-        "rgb": {
-            "red": 107,
-            "green": 50,
-            "blue": 123
-        }
-    },
-    "0xe29b3f": {
-        "lego_id": 105,
-        "color": "Br. yellowish orange",
-        "hex": "#e29b3f",
-        "rgb": {
-            "red": 226,
-            "green": 155,
-            "blue": 63
-        }
-    },
-    "0xda8540": {
-        "lego_id": 106,
-        "color": "Bright orange",
-        "hex": "#da8540",
-        "rgb": {
-            "red": 218,
-            "green": 133,
-            "blue": 64
-        }
-    },
-    "0x008f9b": {
-        "lego_id": 107,
-        "color": "Bright bluish green",
-        "hex": "#008f9b",
-        "rgb": {
-            "red": 0,
-            "green": 143,
-            "blue": 155
-        }
-    },
-    "0x685c43": {
-        "lego_id": 108,
-        "color": "Earth yellow",
-        "hex": "#685c43",
-        "rgb": {
-            "red": 104,
-            "green": 92,
-            "blue": 67
-        }
-    },
-    "0x435493": {
-        "lego_id": 110,
-        "color": "Bright bluish violet",
-        "hex": "#435493",
-        "rgb": {
-            "red": 67,
-            "green": 84,
-            "blue": 147
-        }
-    },
-    "0x6874ac": {
-        "lego_id": 112,
-        "color": "Medium bluish violet",
-        "hex": "#6874ac",
-        "rgb": {
-            "red": 104,
-            "green": 116,
-            "blue": 172
-        }
-    },
-    "0xc7d23c": {
-        "lego_id": 115,
-        "color": "Med. yellowish green",
-        "hex": "#c7d23c",
-        "rgb": {
-            "red": 199,
-            "green": 210,
-            "blue": 60
-        }
-    },
-    "0x55a5af": {
-        "lego_id": 116,
-        "color": "Med. bluish green",
-        "hex": "#55a5af",
-        "rgb": {
-            "red": 85,
-            "green": 165,
-            "blue": 175
-        }
-    },
-    "0xb7d7d5": {
-        "lego_id": 118,
-        "color": "Light bluish green",
-        "hex": "#b7d7d5",
-        "rgb": {
-            "red": 183,
-            "green": 215,
-            "blue": 213
-        }
-    },
-    "0xa4bd46": {
-        "lego_id": 119,
-        "color": "Br. yellowish green",
-        "hex": "#a4bd46",
-        "rgb": {
-            "red": 164,
-            "green": 189,
-            "blue": 70
-        }
-    },
-    "0xd9e4a7": {
-        "lego_id": 120,
-        "color": "Lig. yellowish green",
-        "hex": "#d9e4a7",
-        "rgb": {
-            "red": 217,
-            "green": 228,
-            "blue": 167
-        }
-    },
-    "0xe7ac58": {
-        "lego_id": 121,
-        "color": "Med. yellowish orange",
-        "hex": "#e7ac58",
-        "rgb": {
-            "red": 231,
-            "green": 172,
-            "blue": 88
-        }
-    },
-    "0xd36f4c": {
-        "lego_id": 123,
-        "color": "Br. reddish orange",
-        "hex": "#d36f4c",
-        "rgb": {
-            "red": 211,
-            "green": 111,
-            "blue": 76
-        }
-    },
-    "0x923978": {
-        "lego_id": 124,
-        "color": "Bright reddish violet",
-        "hex": "#923978",
-        "rgb": {
-            "red": 146,
-            "green": 57,
-            "blue": 120
-        }
-    },
-    "0xeab891": {
-        "lego_id": 125,
-        "color": "Light orange",
-        "hex": "#eab891",
-        "rgb": {
-            "red": 234,
-            "green": 184,
-            "blue": 145
-        }
-    },
-    "0xdcbc81": {
-        "lego_id": 127,
-        "color": "Gold",
-        "hex": "#dcbc81",
-        "rgb": {
-            "red": 220,
-            "green": 188,
-            "blue": 129
-        }
-    },
-    "0xae7a59": {
-        "lego_id": 128,
-        "color": "Dark nougat",
-        "hex": "#ae7a59",
-        "rgb": {
-            "red": 174,
-            "green": 122,
-            "blue": 89
-        }
-    },
-    "0x9ca3a8": {
-        "lego_id": 131,
-        "color": "Silver",
-        "hex": "#9ca3a8",
-        "rgb": {
-            "red": 156,
-            "green": 163,
-            "blue": 168
-        }
-    },
-    "0x74869c": {
-        "lego_id": 135,
-        "color": "Sand blue",
-        "hex": "#74869c",
-        "rgb": {
-            "red": 116,
-            "green": 134,
-            "blue": 156
-        }
-    },
-    "0x877c90": {
-        "lego_id": 136,
-        "color": "Sand violet",
-        "hex": "#877c90",
-        "rgb": {
-            "red": 135,
-            "green": 124,
-            "blue": 144
-        }
-    },
-    "0xe09864": {
-        "lego_id": 137,
-        "color": "Medium orange",
-        "hex": "#e09864",
-        "rgb": {
-            "red": 224,
-            "green": 152,
-            "blue": 100
-        }
-    },
-    "0x958a73": {
-        "lego_id": 138,
-        "color": "Sand yellow",
-        "hex": "#958a73",
-        "rgb": {
-            "red": 149,
-            "green": 138,
-            "blue": 115
-        }
-    },
-    "0x203a56": {
-        "lego_id": 140,
-        "color": "Earth blue",
-        "hex": "#203a56",
-        "rgb": {
-            "red": 32,
-            "green": 58,
-            "blue": 86
-        }
-    },
-    "0x27462c": {
-        "lego_id": 141,
-        "color": "Earth green",
-        "hex": "#27462c",
-        "rgb": {
-            "red": 39,
-            "green": 70,
-            "blue": 44
-        }
-    },
-    "0x7988a1": {
-        "lego_id": 145,
-        "color": "Sand blue metallic",
-        "hex": "#7988a1",
-        "rgb": {
-            "red": 121,
-            "green": 136,
-            "blue": 161
-        }
-    },
-    "0x958ea3": {
-        "lego_id": 146,
-        "color": "Sand violet metallic",
-        "hex": "#958ea3",
-        "rgb": {
-            "red": 149,
-            "green": 142,
-            "blue": 163
-        }
-    },
-    "0x938767": {
-        "lego_id": 147,
-        "color": "Sand yellow metallic",
-        "hex": "#938767",
-        "rgb": {
-            "red": 147,
-            "green": 135,
-            "blue": 103
-        }
-    },
-    "0x575857": {
-        "lego_id": 148,
-        "color": "Dark grey metallic",
-        "hex": "#575857",
-        "rgb": {
-            "red": 87,
-            "green": 88,
-            "blue": 87
-        }
-    },
-    "0x161d32": {
-        "lego_id": 149,
-        "color": "Black metallic",
-        "hex": "#161d32",
-        "rgb": {
-            "red": 22,
-            "green": 29,
-            "blue": 50
-        }
-    },
-    "0xabadac": {
-        "lego_id": 150,
-        "color": "Light grey metallic",
-        "hex": "#abadac",
-        "rgb": {
-            "red": 171,
-            "green": 173,
-            "blue": 172
-        }
-    },
-    "0x789081": {
-        "lego_id": 151,
-        "color": "Sand green",
-        "hex": "#789081",
-        "rgb": {
-            "red": 120,
-            "green": 144,
-            "blue": 129
-        }
-    },
-    "0x957976": {
-        "lego_id": 153,
-        "color": "Sand red",
-        "hex": "#957976",
-        "rgb": {
-            "red": 149,
-            "green": 121,
-            "blue": 118
-        }
-    },
-    "0x7b2e2f": {
-        "lego_id": 154,
-        "color": "Dark red",
-        "hex": "#7b2e2f",
-        "rgb": {
-            "red": 123,
-            "green": 46,
-            "blue": 47
-        }
-    },
-    "0x756c62": {
-        "lego_id": 168,
-        "color": "Gun metallic",
-        "hex": "#756c62",
-        "rgb": {
-            "red": 117,
-            "green": 108,
-            "blue": 98
-        }
-    },
-    "0xd7a94b": {
-        "lego_id": 180,
-        "color": "Curry",
-        "hex": "#d7a94b",
-        "rgb": {
-            "red": 215,
-            "green": 169,
-            "blue": 75
-        }
-    },
-    "0x828a5d": {
-        "lego_id": 200,
-        "color": "Lemon metalic",
-        "hex": "#828a5d",
-        "rgb": {
-            "red": 130,
-            "green": 138,
-            "blue": 93
-        }
-    },
-    "0xf9d62e": {
-        "lego_id": 190,
-        "color": "Fire Yellow",
-        "hex": "#f9d62e",
-        "rgb": {
-            "red": 249,
-            "green": 214,
-            "blue": 46
-        }
-    },
-    "0xe8ab2d": {
-        "lego_id": 191,
-        "color": "Flame yellowish orange",
-        "hex": "#e8ab2d",
-        "rgb": {
-            "red": 232,
-            "green": 171,
-            "blue": 45
-        }
-    },
-    "0x694027": {
-        "lego_id": 192,
-        "color": "Reddish brown",
-        "hex": "#694027",
-        "rgb": {
-            "red": 105,
-            "green": 64,
-            "blue": 39
-        }
-    },
-    "0xcf6024": {
-        "lego_id": 193,
-        "color": "Flame reddish orange",
-        "hex": "#cf6024",
-        "rgb": {
-            "red": 207,
-            "green": 96,
-            "blue": 36
-        }
-    },
-    "0xa3a2a4": {
-        "lego_id": 194,
-        "color": "Medium stone grey",
-        "hex": "#a3a2a4",
-        "rgb": {
-            "red": 163,
-            "green": 162,
-            "blue": 164
-        }
-    },
-    "0x4667a4": {
-        "lego_id": 195,
-        "color": "Royal blue",
-        "hex": "#4667a4",
-        "rgb": {
-            "red": 70,
-            "green": 103,
-            "blue": 164
-        }
-    },
-    "0x23478b": {
-        "lego_id": 196,
-        "color": "Dark Royal blue",
-        "hex": "#23478b",
-        "rgb": {
-            "red": 35,
-            "green": 71,
-            "blue": 139
-        }
-    },
-    "0x8e4285": {
-        "lego_id": 198,
-        "color": "Bright reddish lilac",
-        "hex": "#8e4285",
-        "rgb": {
-            "red": 142,
-            "green": 66,
-            "blue": 133
-        }
-    },
-    "0x635f61": {
-        "lego_id": 199,
-        "color": "Dark stone grey",
-        "hex": "#635f61",
-        "rgb": {
-            "red": 99,
-            "green": 95,
-            "blue": 97
-        }
-    },
-    "0xe5e4de": {
-        "lego_id": 208,
-        "color": "Light stone grey",
-        "hex": "#e5e4de",
-        "rgb": {
-            "red": 229,
-            "green": 228,
-            "blue": 222
-        }
-    },
-    "0xb08e44": {
-        "lego_id": 209,
-        "color": "Dark Curry",
-        "hex": "#b08e44",
-        "rgb": {
-            "red": 176,
-            "green": 142,
-            "blue": 68
-        }
-    },
-    "0x709578": {
-        "lego_id": 210,
-        "color": "Faded green",
-        "hex": "#709578",
-        "rgb": {
-            "red": 112,
-            "green": 149,
-            "blue": 120
-        }
-    },
-    "0x79b5b5": {
-        "lego_id": 211,
-        "color": "Turquoise",
-        "hex": "#79b5b5",
-        "rgb": {
-            "red": 121,
-            "green": 181,
-            "blue": 181
-        }
-    },
-    "0x9fc3e9": {
-        "lego_id": 212,
-        "color": "Light Royal blue",
-        "hex": "#9fc3e9",
-        "rgb": {
-            "red": 159,
-            "green": 195,
-            "blue": 233
-        }
-    },
-    "0x6c81b7": {
-        "lego_id": 213,
-        "color": "Medium Royal blue",
-        "hex": "#6c81b7",
-        "rgb": {
-            "red": 108,
-            "green": 129,
-            "blue": 183
-        }
-    },
-    "0x8f4c2a": {
-        "lego_id": 216,
+    "216": {
         "color": "Rust",
+        "hsv": {
+            "hue": 0.05610561056105612,
+            "saturation": 0.7062937062937064,
+            "value": 0.5607843137254902
+        },
+        "lego_id": 216,
         "hex": "#8f4c2a",
         "rgb": {
-            "red": 143,
+            "blue": 42,
             "green": 76,
-            "blue": 42
+            "red": 143
         }
     },
-    "0x7c5c45": {
-        "lego_id": 217,
+    "217": {
         "color": "Brown",
+        "hsv": {
+            "hue": 0.0696969696969697,
+            "saturation": 0.44354838709677424,
+            "value": 0.48627450980392156
+        },
+        "lego_id": 217,
         "hex": "#7c5c45",
         "rgb": {
-            "red": 124,
+            "blue": 69,
             "green": 92,
-            "blue": 69
+            "red": 124
         }
     },
-    "0x96709f": {
-        "lego_id": 218,
+    "212": {
+        "color": "Light Royal blue",
+        "hsv": {
+            "hue": 0.5855855855855857,
+            "saturation": 0.31759656652360513,
+            "value": 0.9137254901960784
+        },
+        "lego_id": 212,
+        "hex": "#9fc3e9",
+        "rgb": {
+            "blue": 233,
+            "green": 195,
+            "red": 159
+        }
+    },
+    "213": {
+        "color": "Medium Royal blue",
+        "hsv": {
+            "hue": 0.62,
+            "saturation": 0.4098360655737705,
+            "value": 0.7176470588235294
+        },
+        "lego_id": 213,
+        "hex": "#6c81b7",
+        "rgb": {
+            "blue": 183,
+            "green": 129,
+            "red": 108
+        }
+    },
+    "210": {
+        "color": "Faded green",
+        "hsv": {
+            "hue": 0.36936936936936937,
+            "saturation": 0.24832214765100677,
+            "value": 0.5843137254901961
+        },
+        "lego_id": 210,
+        "hex": "#709578",
+        "rgb": {
+            "blue": 120,
+            "green": 149,
+            "red": 112
+        }
+    },
+    "211": {
+        "color": "Turquoise",
+        "hsv": {
+            "hue": 0.5,
+            "saturation": 0.33149171270718236,
+            "value": 0.7098039215686275
+        },
+        "lego_id": 211,
+        "hex": "#79b5b5",
+        "rgb": {
+            "blue": 181,
+            "green": 181,
+            "red": 121
+        }
+    },
+    "218": {
         "color": "Reddish lilac",
+        "hsv": {
+            "hue": 0.8014184397163121,
+            "saturation": 0.29559748427672955,
+            "value": 0.6235294117647059
+        },
+        "lego_id": 218,
         "hex": "#96709f",
         "rgb": {
-            "red": 150,
+            "blue": 159,
             "green": 112,
-            "blue": 159
+            "red": 150
         }
     },
-    "0x6b629b": {
-        "lego_id": 219,
+    "219": {
         "color": "Lilac",
+        "hsv": {
+            "hue": 0.6929824561403509,
+            "saturation": 0.36774193548387085,
+            "value": 0.6078431372549019
+        },
+        "lego_id": 219,
         "hex": "#6b629b",
         "rgb": {
-            "red": 107,
+            "blue": 155,
             "green": 98,
-            "blue": 155
+            "red": 107
         }
     },
-    "0xa7a9ce": {
-        "lego_id": 220,
-        "color": "Light lilac",
-        "hex": "#a7a9ce",
-        "rgb": {
-            "red": 167,
-            "green": 169,
-            "blue": 206
-        }
-    },
-    "0xcd6298": {
-        "lego_id": 221,
-        "color": "Bright purple",
-        "hex": "#cd6298",
-        "rgb": {
-            "red": 205,
-            "green": 98,
-            "blue": 152
-        }
-    },
-    "0xe4adc8": {
-        "lego_id": 222,
-        "color": "Light purple",
-        "hex": "#e4adc8",
-        "rgb": {
-            "red": 228,
-            "green": 173,
-            "blue": 200
-        }
-    },
-    "0xdc9095": {
-        "lego_id": 223,
-        "color": "Light pink",
-        "hex": "#dc9095",
-        "rgb": {
-            "red": 220,
-            "green": 144,
-            "blue": 149
-        }
-    },
-    "0xf0d5a0": {
-        "lego_id": 224,
-        "color": "Light brick yellow",
-        "hex": "#f0d5a0",
-        "rgb": {
-            "red": 240,
-            "green": 213,
-            "blue": 160
-        }
-    },
-    "0xebb87f": {
-        "lego_id": 225,
-        "color": "Warm yellowish orange",
-        "hex": "#ebb87f",
-        "rgb": {
-            "red": 235,
-            "green": 184,
-            "blue": 127
-        }
-    },
-    "0xfdea8c": {
-        "lego_id": 226,
-        "color": "Cool yellow",
-        "hex": "#fdea8c",
-        "rgb": {
-            "red": 253,
-            "green": 234,
-            "blue": 140
-        }
-    },
-    "0x7dbbdd": {
-        "lego_id": 232,
-        "color": "Dove blue",
-        "hex": "#7dbbdd",
-        "rgb": {
-            "red": 125,
-            "green": 187,
-            "blue": 221
-        }
-    },
-    "0x342b75": {
-        "lego_id": 268,
-        "color": "Medium lilac",
-        "hex": "#342b75",
-        "rgb": {
-            "red": 52,
-            "green": 43,
-            "blue": 117
-        }
-    },
-    "0xececec": {
-        "lego_id": 40,
-        "color": "Transparent",
-        "hex": "#ececec",
-        "rgb": {
-            "red": 236,
-            "green": 236,
-            "blue": 236
-        }
-    },
-    "0xcd544b": {
-        "lego_id": 41,
-        "color": "Tr. Red",
-        "hex": "#cd544b",
-        "rgb": {
-            "red": 205,
-            "green": 84,
-            "blue": 75
-        }
-    },
-    "0xc1dff0": {
-        "lego_id": 42,
-        "color": "Tr. Lg blue",
-        "hex": "#c1dff0",
-        "rgb": {
-            "red": 193,
-            "green": 223,
-            "blue": 240
-        }
-    },
-    "0x7bb6e8": {
-        "lego_id": 43,
-        "color": "Tr. Blue",
-        "hex": "#7bb6e8",
-        "rgb": {
-            "red": 123,
-            "green": 182,
-            "blue": 232
-        }
-    },
-    "0xf7f18d": {
-        "lego_id": 44,
-        "color": "Tr. Yellow",
-        "hex": "#f7f18d",
-        "rgb": {
-            "red": 247,
-            "green": 241,
-            "blue": 141
-        }
-    },
-    "0xd9856c": {
-        "lego_id": 47,
-        "color": "Tr. Flu. Reddish orange",
-        "hex": "#d9856c",
-        "rgb": {
-            "red": 217,
-            "green": 133,
-            "blue": 108
-        }
-    },
-    "0x84b68d": {
-        "lego_id": 48,
-        "color": "Tr. Green",
-        "hex": "#84b68d",
-        "rgb": {
-            "red": 132,
-            "green": 182,
-            "blue": 141
-        }
-    },
-    "0xf8f184": {
-        "lego_id": 49,
-        "color": "Tr. Flu. Green",
-        "hex": "#f8f184",
-        "rgb": {
-            "red": 248,
-            "green": 241,
-            "blue": 132
-        }
-    },
-    "0xece8de": {
-        "lego_id": 50,
-        "color": "Phosph. White",
-        "hex": "#ece8de",
-        "rgb": {
-            "red": 236,
-            "green": 232,
-            "blue": 222
-        }
-    },
-    "0xbfb7b1": {
-        "lego_id": 111,
-        "color": "Tr. Brown",
-        "hex": "#bfb7b1",
-        "rgb": {
-            "red": 191,
-            "green": 183,
-            "blue": 177
-        }
-    },
-    "0xe4adc8": {
-        "lego_id": 113,
-        "color": "Tr. Medi. reddish violet",
-        "hex": "#e4adc8",
-        "rgb": {
-            "red": 228,
-            "green": 173,
-            "blue": 200
-        }
-    },
-    "0xa5a5cb": {
-        "lego_id": 126,
-        "color": "Tr. Bright bluish violet",
-        "hex": "#a5a5cb",
-        "rgb": {
-            "red": 165,
-            "green": 165,
-            "blue": 203
-        }
-    },
-    "0xd5733d": {
-        "lego_id": 133,
+    "133": {
         "color": "Neon orange",
+        "hsv": {
+            "hue": 0.05921052631578947,
+            "saturation": 0.7136150234741784,
+            "value": 0.8352941176470589
+        },
+        "lego_id": 133,
         "hex": "#d5733d",
         "rgb": {
-            "red": 213,
+            "blue": 61,
             "green": 115,
-            "blue": 61
+            "red": 213
         }
     },
-    "0xd8dd56": {
-        "lego_id": 134,
+    "131": {
+        "color": "Silver",
+        "hsv": {
+            "hue": 0.5694444444444446,
+            "saturation": 0.07142857142857134,
+            "value": 0.6588235294117647
+        },
+        "lego_id": 131,
+        "hex": "#9ca3a8",
+        "rgb": {
+            "blue": 168,
+            "green": 163,
+            "red": 156
+        }
+    },
+    "137": {
+        "color": "Medium orange",
+        "hsv": {
+            "hue": 0.06989247311827956,
+            "saturation": 0.5535714285714286,
+            "value": 0.8784313725490196
+        },
+        "lego_id": 137,
+        "hex": "#e09864",
+        "rgb": {
+            "blue": 100,
+            "green": 152,
+            "red": 224
+        }
+    },
+    "136": {
+        "color": "Sand violet",
+        "hsv": {
+            "hue": 0.7583333333333333,
+            "saturation": 0.1388888888888889,
+            "value": 0.5647058823529412
+        },
+        "lego_id": 136,
+        "hex": "#877c90",
+        "rgb": {
+            "blue": 144,
+            "green": 124,
+            "red": 135
+        }
+    },
+    "135": {
+        "color": "Sand blue",
+        "hsv": {
+            "hue": 0.5916666666666667,
+            "saturation": 0.2564102564102565,
+            "value": 0.611764705882353
+        },
+        "lego_id": 135,
+        "hex": "#74869c",
+        "rgb": {
+            "blue": 156,
+            "green": 134,
+            "red": 116
+        }
+    },
+    "134": {
         "color": "Neon green",
+        "hsv": {
+            "hue": 0.17283950617283952,
+            "saturation": 0.6108597285067873,
+            "value": 0.8666666666666667
+        },
+        "lego_id": 134,
         "hex": "#d8dd56",
         "rgb": {
-            "red": 216,
+            "blue": 86,
             "green": 221,
-            "blue": 86
+            "red": 216
         }
     },
-    "0xcfe2f7": {
-        "lego_id": 143,
-        "color": "Tr. Flu. Blue",
-        "hex": "#cfe2f7",
+    "138": {
+        "color": "Sand yellow",
+        "hsv": {
+            "hue": 0.11274509803921562,
+            "saturation": 0.22818791946308728,
+            "value": 0.5843137254901961
+        },
+        "lego_id": 138,
+        "hex": "#958a73",
         "rgb": {
-            "red": 207,
-            "green": 226,
-            "blue": 247
+            "blue": 115,
+            "green": 138,
+            "red": 149
         }
     },
-    "0xfff67b": {
-        "lego_id": 157,
-        "color": "Tr. Flu. Yellow",
-        "hex": "#fff67b",
+    "24": {
+        "color": "Bright yellow",
+        "hsv": {
+            "hue": 0.132996632996633,
+            "saturation": 0.8081632653061225,
+            "value": 0.9607843137254902
+        },
+        "lego_id": 24,
+        "hex": "#f5cd2f",
         "rgb": {
-            "red": 255,
-            "green": 246,
-            "blue": 123
+            "blue": 47,
+            "green": 205,
+            "red": 245
         }
     },
-    "0xe1a4c2": {
-        "lego_id": 158,
-        "color": "Tr. Flu. Red",
-        "hex": "#e1a4c2",
+    "25": {
+        "color": "Earth orange",
+        "hsv": {
+            "hue": 0.07291666666666667,
+            "saturation": 0.489795918367347,
+            "value": 0.3843137254901961
+        },
+        "lego_id": 25,
+        "hex": "#624732",
         "rgb": {
-            "red": 225,
-            "green": 164,
-            "blue": 194
+            "blue": 50,
+            "green": 71,
+            "red": 98
         }
     },
-    "0x97695b": {
-        "lego_id": 176,
-        "color": "Red flip/flop",
-        "hex": "#97695b",
+    "26": {
+        "color": "Black",
+        "hsv": {
+            "hue": 0.5666666666666668,
+            "saturation": 0.4807692307692308,
+            "value": 0.20392156862745098
+        },
+        "lego_id": 26,
+        "hex": "#1b2a34",
         "rgb": {
-            "red": 151,
+            "blue": 52,
+            "green": 42,
+            "red": 27
+        }
+    },
+    "27": {
+        "color": "Dark grey",
+        "hsv": {
+            "hue": 0.2500000000000006,
+            "saturation": 0.018181818181818243,
+            "value": 0.43137254901960786
+        },
+        "lego_id": 27,
+        "hex": "#6d6e6c",
+        "rgb": {
+            "blue": 108,
+            "green": 110,
+            "red": 109
+        }
+    },
+    "21": {
+        "color": "Bright red",
+        "hsv": {
+            "hue": 0.01282051282051283,
+            "saturation": 0.8622448979591837,
+            "value": 0.7686274509803922
+        },
+        "lego_id": 21,
+        "hex": "#c4281b",
+        "rgb": {
+            "blue": 27,
+            "green": 40,
+            "red": 196
+        }
+    },
+    "22": {
+        "color": "Med. reddish violet",
+        "hsv": {
+            "hue": 0.9047619047619048,
+            "saturation": 0.4285714285714286,
+            "value": 0.7686274509803922
+        },
+        "lego_id": 22,
+        "hex": "#c470a0",
+        "rgb": {
+            "blue": 160,
+            "green": 112,
+            "red": 196
+        }
+    },
+    "23": {
+        "color": "Bright blue",
+        "hsv": {
+            "hue": 0.569620253164557,
+            "saturation": 0.9239766081871345,
+            "value": 0.6705882352941176
+        },
+        "lego_id": 23,
+        "hex": "#0d69ab",
+        "rgb": {
+            "blue": 171,
             "green": 105,
-            "blue": 91
+            "red": 13
         }
     },
-    "0xb48455": {
-        "lego_id": 178,
-        "color": "Yellow flip/flop",
-        "hex": "#b48455",
+    "28": {
+        "color": "Dark green",
+        "hsv": {
+            "hue": 0.39080459770114945,
+            "saturation": 0.6850393700787402,
+            "value": 0.4980392156862745
+        },
+        "lego_id": 28,
+        "hex": "#287f46",
         "rgb": {
-            "red": 180,
-            "green": 132,
-            "blue": 85
+            "blue": 70,
+            "green": 127,
+            "red": 40
         }
     },
-    "0x898788": {
-        "lego_id": 179,
+    "29": {
+        "color": "Medium green",
+        "hsv": {
+            "hue": 0.2690058479532164,
+            "saturation": 0.29081632653061235,
+            "value": 0.7686274509803922
+        },
+        "lego_id": 29,
+        "hex": "#a1c48b",
+        "rgb": {
+            "blue": 139,
+            "green": 196,
+            "red": 161
+        }
+    },
+    "120": {
+        "color": "Lig. yellowish green",
+        "hsv": {
+            "hue": 0.19672131147540992,
+            "saturation": 0.26754385964912286,
+            "value": 0.8941176470588236
+        },
+        "lego_id": 120,
+        "hex": "#d9e4a7",
+        "rgb": {
+            "blue": 167,
+            "green": 228,
+            "red": 217
+        }
+    },
+    "121": {
+        "color": "Med. yellowish orange",
+        "hsv": {
+            "hue": 0.09790209790209792,
+            "saturation": 0.6190476190476191,
+            "value": 0.9058823529411765
+        },
+        "lego_id": 121,
+        "hex": "#e7ac58",
+        "rgb": {
+            "blue": 88,
+            "green": 172,
+            "red": 231
+        }
+    },
+    "123": {
+        "color": "Br. reddish orange",
+        "hsv": {
+            "hue": 0.04320987654320987,
+            "saturation": 0.6398104265402843,
+            "value": 0.8274509803921568
+        },
+        "lego_id": 123,
+        "hex": "#d36f4c",
+        "rgb": {
+            "blue": 76,
+            "green": 111,
+            "red": 211
+        }
+    },
+    "124": {
+        "color": "Bright reddish violet",
+        "hsv": {
+            "hue": 0.8820224719101124,
+            "saturation": 0.6095890410958904,
+            "value": 0.5725490196078431
+        },
+        "lego_id": 124,
+        "hex": "#923978",
+        "rgb": {
+            "blue": 120,
+            "green": 57,
+            "red": 146
+        }
+    },
+    "125": {
+        "color": "Light orange",
+        "hsv": {
+            "hue": 0.07303370786516855,
+            "saturation": 0.3803418803418803,
+            "value": 0.9176470588235294
+        },
+        "lego_id": 125,
+        "hex": "#eab891",
+        "rgb": {
+            "blue": 145,
+            "green": 184,
+            "red": 234
+        }
+    },
+    "126": {
+        "color": "Tr. Bright bluish violet",
+        "hsv": {
+            "hue": 0.6666666666666666,
+            "saturation": 0.1871921182266009,
+            "value": 0.796078431372549
+        },
+        "lego_id": 126,
+        "hex": "#a5a5cb",
+        "rgb": {
+            "blue": 203,
+            "green": 165,
+            "red": 165
+        }
+    },
+    "127": {
+        "color": "Gold",
+        "hsv": {
+            "hue": 0.10805860805860808,
+            "saturation": 0.4136363636363637,
+            "value": 0.8627450980392157
+        },
+        "lego_id": 127,
+        "hex": "#dcbc81",
+        "rgb": {
+            "blue": 129,
+            "green": 188,
+            "red": 220
+        }
+    },
+    "128": {
+        "color": "Dark nougat",
+        "hsv": {
+            "hue": 0.06470588235294118,
+            "saturation": 0.4885057471264368,
+            "value": 0.6823529411764706
+        },
+        "lego_id": 128,
+        "hex": "#ae7a59",
+        "rgb": {
+            "blue": 89,
+            "green": 122,
+            "red": 174
+        }
+    },
+    "268": {
+        "color": "Medium lilac",
+        "hsv": {
+            "hue": 0.686936936936937,
+            "saturation": 0.6324786324786325,
+            "value": 0.4588235294117647
+        },
+        "lego_id": 268,
+        "hex": "#342b75",
+        "rgb": {
+            "blue": 117,
+            "green": 43,
+            "red": 52
+        }
+    },
+    "50": {
+        "color": "Phosph. White",
+        "hsv": {
+            "hue": 0.1190476190476189,
+            "saturation": 0.059322033898305114,
+            "value": 0.9254901960784314
+        },
+        "lego_id": 50,
+        "hex": "#ece8de",
+        "rgb": {
+            "blue": 222,
+            "green": 232,
+            "red": 236
+        }
+    },
+    "199": {
+        "color": "Dark stone grey",
+        "hsv": {
+            "hue": 0.916666666666667,
+            "saturation": 0.0404040404040404,
+            "value": 0.38823529411764707
+        },
+        "lego_id": 199,
+        "hex": "#635f61",
+        "rgb": {
+            "blue": 97,
+            "green": 95,
+            "red": 99
+        }
+    },
+    "198": {
+        "color": "Bright reddish lilac",
+        "hsv": {
+            "hue": 0.8530701754385965,
+            "saturation": 0.5352112676056338,
+            "value": 0.5568627450980392
+        },
+        "lego_id": 198,
+        "hex": "#8e4285",
+        "rgb": {
+            "blue": 133,
+            "green": 66,
+            "red": 142
+        }
+    },
+    "147": {
+        "color": "Sand yellow metallic",
+        "hsv": {
+            "hue": 0.12121212121212126,
+            "saturation": 0.2993197278911564,
+            "value": 0.5764705882352941
+        },
+        "lego_id": 147,
+        "hex": "#938767",
+        "rgb": {
+            "blue": 103,
+            "green": 135,
+            "red": 147
+        }
+    },
+    "195": {
+        "color": "Royal blue",
+        "hsv": {
+            "hue": 0.6081560283687942,
+            "saturation": 0.573170731707317,
+            "value": 0.6431372549019608
+        },
+        "lego_id": 195,
+        "hex": "#4667a4",
+        "rgb": {
+            "blue": 164,
+            "green": 103,
+            "red": 70
+        }
+    },
+    "194": {
+        "color": "Medium stone grey",
+        "hsv": {
+            "hue": 0.7499999999999988,
+            "saturation": 0.012195121951219641,
+            "value": 0.6431372549019608
+        },
+        "lego_id": 194,
+        "hex": "#a3a2a4",
+        "rgb": {
+            "blue": 164,
+            "green": 162,
+            "red": 163
+        }
+    },
+    "196": {
+        "color": "Dark Royal blue",
+        "hsv": {
+            "hue": 0.6089743589743589,
+            "saturation": 0.7482014388489208,
+            "value": 0.5450980392156862
+        },
+        "lego_id": 196,
+        "hex": "#23478b",
+        "rgb": {
+            "blue": 139,
+            "green": 71,
+            "red": 35
+        }
+    },
+    "191": {
+        "color": "Flame yellowish orange",
+        "hsv": {
+            "hue": 0.1122994652406417,
+            "saturation": 0.8060344827586207,
+            "value": 0.9098039215686274
+        },
+        "lego_id": 191,
+        "hex": "#e8ab2d",
+        "rgb": {
+            "blue": 45,
+            "green": 171,
+            "red": 232
+        }
+    },
+    "190": {
+        "color": "Fire Yellow",
+        "hsv": {
+            "hue": 0.13793103448275865,
+            "saturation": 0.8152610441767068,
+            "value": 0.9764705882352941
+        },
+        "lego_id": 190,
+        "hex": "#f9d62e",
+        "rgb": {
+            "blue": 46,
+            "green": 214,
+            "red": 249
+        }
+    },
+    "193": {
+        "color": "Flame reddish orange",
+        "hsv": {
+            "hue": 0.05847953216374271,
+            "saturation": 0.8260869565217392,
+            "value": 0.8117647058823529
+        },
+        "lego_id": 193,
+        "hex": "#cf6024",
+        "rgb": {
+            "blue": 36,
+            "green": 96,
+            "red": 207
+        }
+    },
+    "192": {
+        "color": "Reddish brown",
+        "hsv": {
+            "hue": 0.06313131313131314,
+            "saturation": 0.6285714285714286,
+            "value": 0.4117647058823529
+        },
+        "lego_id": 192,
+        "hex": "#694027",
+        "rgb": {
+            "blue": 39,
+            "green": 64,
+            "red": 105
+        }
+    },
+    "115": {
+        "color": "Med. yellowish green",
+        "hsv": {
+            "hue": 0.17888888888888888,
+            "saturation": 0.7142857142857142,
+            "value": 0.8235294117647058
+        },
+        "lego_id": 115,
+        "hex": "#c7d23c",
+        "rgb": {
+            "blue": 60,
+            "green": 210,
+            "red": 199
+        }
+    },
+    "116": {
+        "color": "Med. bluish green",
+        "hsv": {
+            "hue": 0.5185185185185185,
+            "saturation": 0.5142857142857143,
+            "value": 0.6862745098039216
+        },
+        "lego_id": 116,
+        "hex": "#55a5af",
+        "rgb": {
+            "blue": 175,
+            "green": 165,
+            "red": 85
+        }
+    },
+    "111": {
+        "color": "Tr. Brown",
+        "hsv": {
+            "hue": 0.07142857142857147,
+            "saturation": 0.07329842931937176,
+            "value": 0.7490196078431373
+        },
+        "lego_id": 111,
+        "hex": "#bfb7b1",
+        "rgb": {
+            "blue": 177,
+            "green": 183,
+            "red": 191
+        }
+    },
+    "110": {
+        "color": "Bright bluish violet",
+        "hsv": {
+            "hue": 0.63125,
+            "saturation": 0.5442176870748299,
+            "value": 0.5764705882352941
+        },
+        "lego_id": 110,
+        "hex": "#435493",
+        "rgb": {
+            "blue": 147,
+            "green": 84,
+            "red": 67
+        }
+    },
+    "113": {
+        "color": "Tr. Medi. reddish violet",
+        "hsv": {
+            "hue": 0.9181818181818182,
+            "saturation": 0.2412280701754386,
+            "value": 0.8941176470588236
+        },
+        "lego_id": 113,
+        "hex": "#e4adc8",
+        "rgb": {
+            "blue": 200,
+            "green": 173,
+            "red": 228
+        }
+    },
+    "112": {
+        "color": "Medium bluish violet",
+        "hsv": {
+            "hue": 0.6372549019607843,
+            "saturation": 0.39534883720930236,
+            "value": 0.6745098039215687
+        },
+        "lego_id": 112,
+        "hex": "#6874ac",
+        "rgb": {
+            "blue": 172,
+            "green": 116,
+            "red": 104
+        }
+    },
+    "119": {
+        "color": "Br. yellowish green",
+        "hsv": {
+            "hue": 0.2016806722689076,
+            "saturation": 0.6296296296296297,
+            "value": 0.7411764705882353
+        },
+        "lego_id": 119,
+        "hex": "#a4bd46",
+        "rgb": {
+            "blue": 70,
+            "green": 189,
+            "red": 164
+        }
+    },
+    "118": {
+        "color": "Light bluish green",
+        "hsv": {
+            "hue": 0.4895833333333333,
+            "saturation": 0.14883720930232558,
+            "value": 0.8431372549019608
+        },
+        "lego_id": 118,
+        "hex": "#b7d7d5",
+        "rgb": {
+            "blue": 213,
+            "green": 215,
+            "red": 183
+        }
+    },
+    "3": {
+        "color": "Light yellow",
+        "hsv": {
+            "hue": 0.1388888888888889,
+            "saturation": 0.3855421686746988,
+            "value": 0.9764705882352941
+        },
+        "lego_id": 3,
+        "hex": "#f9e999",
+        "rgb": {
+            "blue": 153,
+            "green": 233,
+            "red": 249
+        }
+    },
+    "108": {
+        "color": "Earth yellow",
+        "hsv": {
+            "hue": 0.11261261261261261,
+            "saturation": 0.3557692307692307,
+            "value": 0.40784313725490196
+        },
+        "lego_id": 108,
+        "hex": "#685c43",
+        "rgb": {
+            "blue": 67,
+            "green": 92,
+            "red": 104
+        }
+    },
+    "102": {
+        "color": "Medium blue",
+        "hsv": {
+            "hue": 0.5879120879120879,
+            "saturation": 0.45273631840796014,
+            "value": 0.788235294117647
+        },
+        "lego_id": 102,
+        "hex": "#6e99c9",
+        "rgb": {
+            "blue": 201,
+            "green": 153,
+            "red": 110
+        }
+    },
+    "103": {
+        "color": "Light grey",
+        "hsv": {
+            "hue": 0.10416666666666659,
+            "saturation": 0.08040201005025126,
+            "value": 0.7803921568627451
+        },
+        "lego_id": 103,
+        "hex": "#c7c1b7",
+        "rgb": {
+            "blue": 183,
+            "green": 193,
+            "red": 199
+        }
+    },
+    "100": {
+        "color": "Light red",
+        "hsv": {
+            "hue": 0.041666666666666685,
+            "saturation": 0.23529411764705882,
+            "value": 0.9333333333333333
+        },
+        "lego_id": 100,
+        "hex": "#eec4b6",
+        "rgb": {
+            "blue": 182,
+            "green": 196,
+            "red": 238
+        }
+    },
+    "101": {
+        "color": "Medium red",
+        "hsv": {
+            "hue": 0.022336769759450186,
+            "saturation": 0.44495412844036697,
+            "value": 0.8549019607843137
+        },
+        "lego_id": 101,
+        "hex": "#da8679",
+        "rgb": {
+            "blue": 121,
+            "green": 134,
+            "red": 218
+        }
+    },
+    "106": {
+        "color": "Bright orange",
+        "hsv": {
+            "hue": 0.07467532467532469,
+            "saturation": 0.7064220183486238,
+            "value": 0.8549019607843137
+        },
+        "lego_id": 106,
+        "hex": "#da8540",
+        "rgb": {
+            "blue": 64,
+            "green": 133,
+            "red": 218
+        }
+    },
+    "107": {
+        "color": "Bright bluish green",
+        "hsv": {
+            "hue": 0.5129032258064515,
+            "saturation": 1.0,
+            "value": 0.6078431372549019
+        },
+        "lego_id": 107,
+        "hex": "#008f9b",
+        "rgb": {
+            "blue": 155,
+            "green": 143,
+            "red": 0
+        }
+    },
+    "104": {
+        "color": "Bright violet",
+        "hsv": {
+            "hue": 0.7968036529680366,
+            "saturation": 0.5934959349593496,
+            "value": 0.4823529411764706
+        },
+        "lego_id": 104,
+        "hex": "#6b327b",
+        "rgb": {
+            "blue": 123,
+            "green": 50,
+            "red": 107
+        }
+    },
+    "105": {
+        "color": "Br. yellowish orange",
+        "hsv": {
+            "hue": 0.09406952965235173,
+            "saturation": 0.7212389380530974,
+            "value": 0.8862745098039215
+        },
+        "lego_id": 105,
+        "hex": "#e29b3f",
+        "rgb": {
+            "blue": 63,
+            "green": 155,
+            "red": 226
+        }
+    },
+    "39": {
+        "color": "Light bluish violet",
+        "hsv": {
+            "hue": 0.6149425287356323,
+            "saturation": 0.13063063063063068,
+            "value": 0.8705882352941177
+        },
+        "lego_id": 39,
+        "hex": "#c1cade",
+        "rgb": {
+            "blue": 222,
+            "green": 202,
+            "red": 193
+        }
+    },
+    "38": {
+        "color": "Dark orange",
+        "hsv": {
+            "hue": 0.06635802469135803,
+            "saturation": 0.675,
+            "value": 0.6274509803921569
+        },
+        "lego_id": 38,
+        "hex": "#a05f34",
+        "rgb": {
+            "blue": 52,
+            "green": 95,
+            "red": 160
+        }
+    },
+    "37": {
+        "color": "Bright green",
+        "hsv": {
+            "hue": 0.33116883116883117,
+            "saturation": 0.509933774834437,
+            "value": 0.592156862745098
+        },
+        "lego_id": 37,
+        "hex": "#4b974a",
+        "rgb": {
+            "blue": 74,
+            "green": 151,
+            "red": 75
+        }
+    },
+    "36": {
+        "color": "Lig. Yellowich orange",
+        "hsv": {
+            "hue": 0.09848484848484851,
+            "saturation": 0.36213991769547327,
+            "value": 0.9529411764705882
+        },
+        "lego_id": 36,
+        "hex": "#f3cf9b",
+        "rgb": {
+            "blue": 155,
+            "green": 207,
+            "red": 243
+        }
+    },
+    "179": {
         "color": "Silver flip/flop",
+        "hsv": {
+            "hue": 0.9166666666666666,
+            "saturation": 0.01459854014598535,
+            "value": 0.5372549019607843
+        },
+        "lego_id": 179,
         "hex": "#898788",
         "rgb": {
-            "red": 137,
+            "blue": 136,
             "green": 135,
-            "blue": 136
+            "red": 137
+        }
+    },
+    "178": {
+        "color": "Yellow flip/flop",
+        "hsv": {
+            "hue": 0.08245614035087721,
+            "saturation": 0.5277777777777778,
+            "value": 0.7058823529411765
+        },
+        "lego_id": 178,
+        "hex": "#b48455",
+        "rgb": {
+            "blue": 85,
+            "green": 132,
+            "red": 180
+        }
+    },
+    "176": {
+        "color": "Red flip/flop",
+        "hsv": {
+            "hue": 0.03888888888888886,
+            "saturation": 0.3973509933774834,
+            "value": 0.592156862745098
+        },
+        "lego_id": 176,
+        "hex": "#97695b",
+        "rgb": {
+            "blue": 91,
+            "green": 105,
+            "red": 151
+        }
+    },
+    "180": {
+        "color": "Curry",
+        "hsv": {
+            "hue": 0.11190476190476191,
+            "saturation": 0.6511627906976745,
+            "value": 0.8431372549019608
+        },
+        "lego_id": 180,
+        "hex": "#d7a94b",
+        "rgb": {
+            "blue": 75,
+            "green": 169,
+            "red": 215
+        }
+    },
+    "2": {
+        "color": "Grey",
+        "hsv": {
+            "hue": 0.3749999999999997,
+            "saturation": 0.024242424242424326,
+            "value": 0.6470588235294118
+        },
+        "lego_id": 2,
+        "hex": "#a1a5a2",
+        "rgb": {
+            "blue": 162,
+            "green": 165,
+            "red": 161
+        }
+    },
+    "6": {
+        "color": "Light green",
+        "hsv": {
+            "hue": 0.2843137254901961,
+            "saturation": 0.15596330275229356,
+            "value": 0.8549019607843137
+        },
+        "lego_id": 6,
+        "hex": "#c2dab8",
+        "rgb": {
+            "blue": 184,
+            "green": 218,
+            "red": 194
+        }
+    },
+    "168": {
+        "color": "Gun metallic",
+        "hsv": {
+            "hue": 0.08771929824561402,
+            "saturation": 0.16239316239316232,
+            "value": 0.4588235294117647
+        },
+        "lego_id": 168,
+        "hex": "#756c62",
+        "rgb": {
+            "blue": 98,
+            "green": 108,
+            "red": 117
+        }
+    },
+    "226": {
+        "color": "Cool yellow",
+        "hsv": {
+            "hue": 0.13864306784660765,
+            "saturation": 0.44664031620553357,
+            "value": 0.9921568627450981
+        },
+        "lego_id": 226,
+        "hex": "#fdea8c",
+        "rgb": {
+            "blue": 140,
+            "green": 234,
+            "red": 253
+        }
+    },
+    "225": {
+        "color": "Warm yellowish orange",
+        "hsv": {
+            "hue": 0.08796296296296297,
+            "saturation": 0.4595744680851063,
+            "value": 0.9215686274509803
+        },
+        "lego_id": 225,
+        "hex": "#ebb87f",
+        "rgb": {
+            "blue": 127,
+            "green": 184,
+            "red": 235
+        }
+    },
+    "224": {
+        "color": "Light brick yellow",
+        "hsv": {
+            "hue": 0.11041666666666668,
+            "saturation": 0.3333333333333333,
+            "value": 0.9411764705882353
+        },
+        "lego_id": 224,
+        "hex": "#f0d5a0",
+        "rgb": {
+            "blue": 160,
+            "green": 213,
+            "red": 240
+        }
+    },
+    "223": {
+        "color": "Light pink",
+        "hsv": {
+            "hue": 0.9890350877192983,
+            "saturation": 0.3454545454545455,
+            "value": 0.8627450980392157
+        },
+        "lego_id": 223,
+        "hex": "#dc9095",
+        "rgb": {
+            "blue": 149,
+            "green": 144,
+            "red": 220
+        }
+    },
+    "222": {
+        "color": "Light purple",
+        "hsv": {
+            "hue": 0.9181818181818182,
+            "saturation": 0.2412280701754386,
+            "value": 0.8941176470588236
+        },
+        "lego_id": 222,
+        "hex": "#e4adc8",
+        "rgb": {
+            "blue": 200,
+            "green": 173,
+            "red": 228
+        }
+    },
+    "221": {
+        "color": "Bright purple",
+        "hsv": {
+            "hue": 0.9158878504672897,
+            "saturation": 0.5219512195121951,
+            "value": 0.803921568627451
+        },
+        "lego_id": 221,
+        "hex": "#cd6298",
+        "rgb": {
+            "blue": 152,
+            "green": 98,
+            "red": 205
+        }
+    },
+    "220": {
+        "color": "Light lilac",
+        "hsv": {
+            "hue": 0.6581196581196581,
+            "saturation": 0.18932038834951456,
+            "value": 0.807843137254902
+        },
+        "lego_id": 220,
+        "hex": "#a7a9ce",
+        "rgb": {
+            "blue": 206,
+            "green": 169,
+            "red": 167
+        }
+    },
+    "12": {
+        "color": "Light orange brown",
+        "hsv": {
+            "hue": 0.08029197080291972,
+            "saturation": 0.6748768472906402,
+            "value": 0.796078431372549
+        },
+        "lego_id": 12,
+        "hex": "#cb8442",
+        "rgb": {
+            "blue": 66,
+            "green": 132,
+            "red": 203
+        }
+    },
+    "18": {
+        "color": "Nougat",
+        "hsv": {
+            "hue": 0.06333333333333334,
+            "saturation": 0.4901960784313726,
+            "value": 0.8
+        },
+        "lego_id": 18,
+        "hex": "#cc8e68",
+        "rgb": {
+            "blue": 104,
+            "green": 142,
+            "red": 204
+        }
+    },
+    "151": {
+        "color": "Sand green",
+        "hsv": {
+            "hue": 0.3958333333333333,
+            "saturation": 0.16666666666666666,
+            "value": 0.5647058823529412
+        },
+        "lego_id": 151,
+        "hex": "#789081",
+        "rgb": {
+            "blue": 129,
+            "green": 144,
+            "red": 120
+        }
+    },
+    "150": {
+        "color": "Light grey metallic",
+        "hsv": {
+            "hue": 0.41666666666666785,
+            "saturation": 0.01156069364161862,
+            "value": 0.6784313725490196
+        },
+        "lego_id": 150,
+        "hex": "#abadac",
+        "rgb": {
+            "blue": 172,
+            "green": 173,
+            "red": 171
+        }
+    },
+    "153": {
+        "color": "Sand red",
+        "hsv": {
+            "hue": 0.016129032258064464,
+            "saturation": 0.2080536912751678,
+            "value": 0.5843137254901961
+        },
+        "lego_id": 153,
+        "hex": "#957976",
+        "rgb": {
+            "blue": 118,
+            "green": 121,
+            "red": 149
+        }
+    },
+    "154": {
+        "color": "Dark red",
+        "hsv": {
+            "hue": 0.9978354978354979,
+            "saturation": 0.6260162601626017,
+            "value": 0.4823529411764706
+        },
+        "lego_id": 154,
+        "hex": "#7b2e2f",
+        "rgb": {
+            "blue": 47,
+            "green": 46,
+            "red": 123
+        }
+    },
+    "157": {
+        "color": "Tr. Flu. Yellow",
+        "hsv": {
+            "hue": 0.1553030303030303,
+            "saturation": 0.5176470588235293,
+            "value": 1.0
+        },
+        "lego_id": 157,
+        "hex": "#fff67b",
+        "rgb": {
+            "blue": 123,
+            "green": 246,
+            "red": 255
+        }
+    },
+    "158": {
+        "color": "Tr. Flu. Red",
+        "hsv": {
+            "hue": 0.9180327868852459,
+            "saturation": 0.271111111111111,
+            "value": 0.8823529411764706
+        },
+        "lego_id": 158,
+        "hex": "#e1a4c2",
+        "rgb": {
+            "blue": 194,
+            "green": 164,
+            "red": 225
+        }
+    },
+    "232": {
+        "color": "Dove blue",
+        "hsv": {
+            "hue": 0.5590277777777778,
+            "saturation": 0.4343891402714933,
+            "value": 0.8666666666666667
+        },
+        "lego_id": 232,
+        "hex": "#7dbbdd",
+        "rgb": {
+            "blue": 221,
+            "green": 187,
+            "red": 125
+        }
+    },
+    "48": {
+        "color": "Tr. Green",
+        "hsv": {
+            "hue": 0.3633333333333333,
+            "saturation": 0.2747252747252747,
+            "value": 0.7137254901960784
+        },
+        "lego_id": 48,
+        "hex": "#84b68d",
+        "rgb": {
+            "blue": 141,
+            "green": 182,
+            "red": 132
+        }
+    },
+    "49": {
+        "color": "Tr. Flu. Green",
+        "hsv": {
+            "hue": 0.15660919540229884,
+            "saturation": 0.4677419354838709,
+            "value": 0.9725490196078431
+        },
+        "lego_id": 49,
+        "hex": "#f8f184",
+        "rgb": {
+            "blue": 132,
+            "green": 241,
+            "red": 248
+        }
+    },
+    "47": {
+        "color": "Tr. Flu. Reddish orange",
+        "hsv": {
+            "hue": 0.038226299694189614,
+            "saturation": 0.5023041474654378,
+            "value": 0.8509803921568627
+        },
+        "lego_id": 47,
+        "hex": "#d9856c",
+        "rgb": {
+            "blue": 108,
+            "green": 133,
+            "red": 217
+        }
+    },
+    "44": {
+        "color": "Tr. Yellow",
+        "hsv": {
+            "hue": 0.15723270440251572,
+            "saturation": 0.42914979757085014,
+            "value": 0.9686274509803922
+        },
+        "lego_id": 44,
+        "hex": "#f7f18d",
+        "rgb": {
+            "blue": 141,
+            "green": 241,
+            "red": 247
+        }
+    },
+    "45": {
+        "color": "Light blue",
+        "hsv": {
+            "hue": 0.5602836879432624,
+            "saturation": 0.20704845814977962,
+            "value": 0.8901960784313725
+        },
+        "lego_id": 45,
+        "hex": "#b4d2e3",
+        "rgb": {
+            "blue": 227,
+            "green": 210,
+            "red": 180
+        }
+    },
+    "42": {
+        "color": "Tr. Lg blue",
+        "hsv": {
+            "hue": 0.5602836879432624,
+            "saturation": 0.19583333333333336,
+            "value": 0.9411764705882353
+        },
+        "lego_id": 42,
+        "hex": "#c1dff0",
+        "rgb": {
+            "blue": 240,
+            "green": 223,
+            "red": 193
+        }
+    },
+    "43": {
+        "color": "Tr. Blue",
+        "hsv": {
+            "hue": 0.5764525993883792,
+            "saturation": 0.4698275862068965,
+            "value": 0.9098039215686274
+        },
+        "lego_id": 43,
+        "hex": "#7bb6e8",
+        "rgb": {
+            "blue": 232,
+            "green": 182,
+            "red": 123
+        }
+    },
+    "40": {
+        "color": "Transparent",
+        "hsv": {
+            "hue": 0.0,
+            "saturation": 0.0,
+            "value": 0.9254901960784314
+        },
+        "lego_id": 40,
+        "hex": "#ececec",
+        "rgb": {
+            "blue": 236,
+            "green": 236,
+            "red": 236
+        }
+    },
+    "41": {
+        "color": "Tr. Red",
+        "hsv": {
+            "hue": 0.011538461538461517,
+            "saturation": 0.6341463414634145,
+            "value": 0.803921568627451
+        },
+        "lego_id": 41,
+        "hex": "#cd544b",
+        "rgb": {
+            "blue": 75,
+            "green": 84,
+            "red": 205
+        }
+    },
+    "1": {
+        "color": "White",
+        "hsv": {
+            "hue": 0.3333333333333333,
+            "saturation": 0.004115226337448545,
+            "value": 0.9529411764705882
+        },
+        "lego_id": 1,
+        "hex": "#f2f3f2",
+        "rgb": {
+            "blue": 242,
+            "green": 243,
+            "red": 242
+        }
+    },
+    "5": {
+        "color": "Brick yellow",
+        "hsv": {
+            "hue": 0.11827956989247314,
+            "saturation": 0.28837209302325584,
+            "value": 0.8431372549019608
+        },
+        "lego_id": 5,
+        "hex": "#d7c599",
+        "rgb": {
+            "blue": 153,
+            "green": 197,
+            "red": 215
+        }
+    },
+    "9": {
+        "color": "Light reddish violet",
+        "hsv": {
+            "hue": 0.9528985507246377,
+            "saturation": 0.19827586206896555,
+            "value": 0.9098039215686274
+        },
+        "lego_id": 9,
+        "hex": "#e8bac7",
+        "rgb": {
+            "blue": 199,
+            "green": 186,
+            "red": 232
+        }
+    },
+    "146": {
+        "color": "Sand violet metallic",
+        "hsv": {
+            "hue": 0.7222222222222223,
+            "saturation": 0.12883435582822075,
+            "value": 0.6392156862745098
+        },
+        "lego_id": 146,
+        "hex": "#958ea3",
+        "rgb": {
+            "blue": 163,
+            "green": 142,
+            "red": 149
+        }
+    },
+    "200": {
+        "color": "Lemon metalic",
+        "hsv": {
+            "hue": 0.19629629629629627,
+            "saturation": 0.32608695652173914,
+            "value": 0.5411764705882353
+        },
+        "lego_id": 200,
+        "hex": "#828a5d",
+        "rgb": {
+            "blue": 93,
+            "green": 138,
+            "red": 130
+        }
+    },
+    "145": {
+        "color": "Sand blue metallic",
+        "hsv": {
+            "hue": 0.6041666666666666,
+            "saturation": 0.2484472049689441,
+            "value": 0.6313725490196078
+        },
+        "lego_id": 145,
+        "hex": "#7988a1",
+        "rgb": {
+            "blue": 161,
+            "green": 136,
+            "red": 121
+        }
+    },
+    "143": {
+        "color": "Tr. Flu. Blue",
+        "hsv": {
+            "hue": 0.5875,
+            "saturation": 0.16194331983805668,
+            "value": 0.9686274509803922
+        },
+        "lego_id": 143,
+        "hex": "#cfe2f7",
+        "rgb": {
+            "blue": 247,
+            "green": 226,
+            "red": 207
+        }
+    },
+    "140": {
+        "color": "Earth blue",
+        "hsv": {
+            "hue": 0.5864197530864198,
+            "saturation": 0.627906976744186,
+            "value": 0.33725490196078434
+        },
+        "lego_id": 140,
+        "hex": "#203a56",
+        "rgb": {
+            "blue": 86,
+            "green": 58,
+            "red": 32
+        }
+    },
+    "141": {
+        "color": "Earth green",
+        "hsv": {
+            "hue": 0.3602150537634408,
+            "saturation": 0.44285714285714284,
+            "value": 0.27450980392156865
+        },
+        "lego_id": 141,
+        "hex": "#27462c",
+        "rgb": {
+            "blue": 44,
+            "green": 70,
+            "red": 39
+        }
+    },
+    "209": {
+        "color": "Dark Curry",
+        "hsv": {
+            "hue": 0.11419753086419754,
+            "saturation": 0.6136363636363636,
+            "value": 0.6901960784313725
+        },
+        "lego_id": 209,
+        "hex": "#b08e44",
+        "rgb": {
+            "blue": 68,
+            "green": 142,
+            "red": 176
+        }
+    },
+    "208": {
+        "color": "Light stone grey",
+        "hsv": {
+            "hue": 0.14285714285714296,
+            "saturation": 0.030567685589519666,
+            "value": 0.8980392156862745
+        },
+        "lego_id": 208,
+        "hex": "#e5e4de",
+        "rgb": {
+            "blue": 222,
+            "green": 228,
+            "red": 229
+        }
+    },
+    "148": {
+        "color": "Dark grey metallic",
+        "hsv": {
+            "hue": 0.3333333333333333,
+            "saturation": 0.011363636363636324,
+            "value": 0.34509803921568627
+        },
+        "lego_id": 148,
+        "hex": "#575857",
+        "rgb": {
+            "blue": 87,
+            "green": 88,
+            "red": 87
+        }
+    },
+    "149": {
+        "color": "Black metallic",
+        "hsv": {
+            "hue": 0.625,
+            "saturation": 0.56,
+            "value": 0.19607843137254902
+        },
+        "lego_id": 149,
+        "hex": "#161d32",
+        "rgb": {
+            "blue": 50,
+            "green": 29,
+            "red": 22
         }
     }
 }

@@ -1,5 +1,6 @@
 import os
 import json
+import colorsys
 import datetime
 from flask import Flask
 from flask import request
@@ -156,11 +157,11 @@ def result(filename):
 
             avg = tuple(int(val/window_count[0]) for val in window_sum)
 
+            (h, _, _) = colorsys.rgb_to_hsv(avg[0], avg[1], avg[2])
+
             _, closest = min(
                 colors.items(),
-                key=lambda (_, v): abs(v['rgb']['red'] - avg[0]) +
-                abs(v['rgb']['green'] - avg[1]) +
-                abs(v['rgb']['blue'] - avg[2]))
+                key=lambda (_, v): abs(v['hsv']['hue'] - h))
 
             avg = tuple(v for (_, v) in closest['rgb'].items())
 
