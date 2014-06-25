@@ -3,3 +3,4 @@ uploads/
 extras
 *.pyc
 static/css/main.css
+.vagrant
