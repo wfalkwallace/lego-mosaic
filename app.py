@@ -12,9 +12,11 @@ from werkzeug.utils import secure_filename
 # PIL Pillow imports
 from PIL import Image
 from PIL import ImageStat
+# GAE
+from google.appengine.ext.webapp.util import run_wsgi_app
 
 app = Flask(__name__)
-app.config.from_object('config.config')
+# app.config.from_object('config.config')
 
 
 # -------------------------------------------------------------------------- #
@@ -209,6 +211,4 @@ def server_error(error):
 def page_not_found(error):
     return render_template("404.html"), 404
 
-
-if __name__ == "__main__":
-    app.run()
+run_wsgi_app(app)
