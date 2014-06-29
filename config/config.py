@@ -15,7 +15,7 @@ try:
     DEBUG = True if environ['DEBUG'] == 'TRUE' else False
 
     # S3 settings
-    S3_ACCESS_KEY_ID=environ['S3_ACCESS_KEY_ID'] 
+    S3_ACCESS_KEY_ID=environ['S3_ACCESS_KEY_ID']
     S3_SECRET_ACCESS_KEY=environ['S3_SECRET_ACCESS_KEY']
     S3_BUCKET_NAME=environ['S3_BUCKET_NAME']
 
