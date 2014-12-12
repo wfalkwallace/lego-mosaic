@@ -81,7 +81,6 @@ def mosaic(filename):
     start = datetime.datetime.now()
     bom = {}
     brick_type = '1x2'
-
     output_filename = '%s%s.%s' % (filename.rsplit('.', 1)[0],
                                    "_mosaic",
                                    filename.rsplit('.', 1)[1])
