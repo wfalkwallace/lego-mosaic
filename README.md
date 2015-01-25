@@ -11,6 +11,7 @@ ToDo:
 - pickabrick
 - random tiling (masonry)
 - fix
+- tile types
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wfalkwallace/lego-mosaic/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
