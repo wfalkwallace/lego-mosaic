@@ -52,7 +52,7 @@ ALLOWED_EXTENSIONS = set([
 ])
 
 # disable this for launch (~~ 'watch')
-app.config["DEBUG"] = True
+# app.config["DEBUG"] = True
 # set app-wide uploads folder
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # limit image/upload max size to 16MB
@@ -188,6 +188,7 @@ def mosaic(filename):
                            colors=colors,
                            brick_type=brick_type,
                            bom=bom,
+                           total=sum(v for (_, v) in bom.items()),
                            time=time)
 
 
@@ -213,4 +214,4 @@ def page_not_found(error):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host=app.config['HOST'])

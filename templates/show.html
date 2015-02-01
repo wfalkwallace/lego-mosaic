@@ -80,7 +80,7 @@
       <div class="row">
         <div class="col-md-2">
           <p>
-          image size: {{ image_size }}
+            image size: {{ image_size }}
           </p>
         </div>
         <div class="col-md-2">
@@ -97,12 +97,12 @@
       <div class="row">
         <div class="col-md-6">
           <table class="widen">
-          <tr>
-            <th>Color ID</th>
-            <th>Brick Name</th>
-            <th>Color Name</th>
-            <th>Count</th>
-          </tr>
+            <tr>
+              <th>Color ID</th>
+              <th>Brick Name</th>
+              <th>Color Name</th>
+              <th>Count</th>
+            </tr>
             {% for (lego_id, count) in bom | dictsort %}
             <tr>
               <td>{{ lego_id }}</td>
@@ -111,6 +111,10 @@
               <td>{{ count }}</td>
             </tr>
             {% endfor %}
+            <tr>
+              <td>Total:</td>
+              <td>{{ total }}</td>
+            </tr>
           </table>
         </div>
       </div>

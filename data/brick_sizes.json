@@ -3,21 +3,21 @@
         "lego_id": 1,
         "size": "1x1",
         "cost": "0.10",
-        "width": "8",
-        "height": "9.6"
+        "width": 8,
+        "height": 9.6
     },
     "1x2": {
         "lego_id": 2,
         "size": "1x2",
         "cost": "0.15",
-        "width": "16",
-        "height": "9.6"
+        "width": 16,
+        "height": 9.6
     },
     "1x4": {
         "lego_id": 3,
         "size": "1x4",
         "cost": "0.2",
-        "width": "32",
-        "height": "9.6"
+        "width": 32,
+        "height": 9.6
     }
 }
