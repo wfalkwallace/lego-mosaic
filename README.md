@@ -7,9 +7,12 @@ Legosaic [![Build Status](https://travis-ci.org/wfalkwallace/lego-mosaic.svg?bra
 
 Given an image, produces a lego-mosaic with BOM and instructions.
 
+ToDo:
+- pickabrick
+- random tiling (masonry)
+- fix
+- tile types
 
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wfalkwallace/lego-mosaic/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-
-[![Creative Commons License](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
-[Legosaic](https://github.com/wfalkwallace/lego-mosaic) by [William Falk-Wallace](https://github.com/wfalkwallace) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
